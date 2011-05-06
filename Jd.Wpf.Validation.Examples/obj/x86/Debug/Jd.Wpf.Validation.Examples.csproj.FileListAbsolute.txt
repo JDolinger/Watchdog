@@ -1,0 +1,16 @@
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\bin\Debug\Jd.Wpf.Validation.Examples.exe
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\bin\Debug\Jd.Wpf.Validation.Examples.pdb
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\bin\Debug\Jd.Wpf.Validation.dll
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\bin\Debug\Jd.Wpf.Validation.pdb
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\MainWindow.baml
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\App.baml
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\MainWindow.g.cs
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\App.g.cs
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\Jd.Wpf.Validation.Examples_MarkupCompile.cache
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\Jd.Wpf.Validation.Examples.g.resources
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\Jd.Wpf.Validation.Examples.Properties.Resources.resources
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\Jd.Wpf.Validation.Examples.exe
+C:\Development\WpfValidation\Jd.Wpf.Validation.Examples\obj\x86\Debug\Jd.Wpf.Validation.Examples.pdb

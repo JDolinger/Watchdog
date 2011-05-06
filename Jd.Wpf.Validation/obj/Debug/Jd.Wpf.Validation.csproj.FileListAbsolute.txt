@@ -1,0 +1,5 @@
+C:\Development\WpfValidation\Jd.Wpf.Validation\bin\Debug\Jd.Wpf.Validation.dll
+C:\Development\WpfValidation\Jd.Wpf.Validation\bin\Debug\Jd.Wpf.Validation.pdb
+C:\Development\WpfValidation\Jd.Wpf.Validation\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\WpfValidation\Jd.Wpf.Validation\obj\Debug\Jd.Wpf.Validation.dll
+C:\Development\WpfValidation\Jd.Wpf.Validation\obj\Debug\Jd.Wpf.Validation.pdb
