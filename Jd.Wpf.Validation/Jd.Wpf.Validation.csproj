@@ -44,6 +44,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientUtil\ValidationCollectionExtensions.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="IField.cs" />

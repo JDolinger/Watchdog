@@ -1,9 +1,8 @@
 ﻿namespace Jd.Wpf.Validation.Examples
 {
-    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
-    using System.Linq;
+    using Jd.Wpf.Validation.ClientUtil;
 
     public class OrderTicketViewModel : INotifyPropertyChanged
     {
@@ -96,22 +95,6 @@
             else
             {
                 this.validationErrors.ClearField("Price");
-            }
-        }
-    }
-
-    public static class ValidationCollectionExtensions
-    {
-        public static void Add(this ICollection<IError> collection, string targetField, string message)
-        {
-            collection.Add(new Error(targetField, message));
-        }
-
-        public static void ClearField(this ICollection<IError> collection, string target)
-        {
-            foreach (var remove in collection.Where(v => v.TargetBinding == target))
-            {
-                collection.Remove(remove);
             }
         }
     }
