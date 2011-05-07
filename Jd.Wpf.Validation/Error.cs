@@ -38,12 +38,43 @@
         {
             get { return this.message; }
         }
+
+        protected bool CompareCore<T>(object obj) where T : ErrorBase
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (this.GetType() != typeof(T))
+            {
+                return false;
+            }
+
+            var other = (T) obj;
+            
+            return object.Equals(this.TargetBinding, other.TargetBinding) &&
+                   object.Equals(this.message, other.Message);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.targetBinding.GetHashCode() ^ this.message.GetHashCode();
+        }
+       
     }
 
     public class Error : ErrorBase
     {
         public Error(string targetBinding, string message) : base(targetBinding, message)
         {
+        }
+
+#pragma warning disable 659
+        public override bool Equals(object obj)
+#pragma warning restore 659
+        {
+            return this.CompareCore<Error>(obj);
         }
     }
 
@@ -67,28 +98,11 @@
             get { return this.invalidData; }
         }
 
+#pragma warning disable 659
         public override bool Equals(object obj)
+#pragma warning restore 659
         {
-            if (obj == null)
-            {
-                return false;
-            }
-
-            if (obj.GetType() != typeof(ConversionError))
-            {
-                return false;
-            }
-
-            var ce = (ConversionError) obj;
-
-            return object.Equals(
-                    this.TargetBinding, 
-                    ce.TargetBinding);
-        }
-
-        public override int GetHashCode()
-        {
-            return this.TargetBinding.GetHashCode();
+            return this.CompareCore<ConversionError>(obj);
         }
     }
 }

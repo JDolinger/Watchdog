@@ -1,4 +1,4 @@
-﻿namespace Jd.Wpf.Validation
+﻿namespace Jd.Wpf.Validation.Internal
 {
     using System;
     using System.Linq;
@@ -10,7 +10,7 @@
     using System.Windows.Data;
     using Jd.Wpf.Validation.Util;
 
-    public class ValidationScope
+    internal class ValidationScope
     {
         private ICollection<IError> errorSource;
 
@@ -81,7 +81,6 @@
                 } 
                 else if (args.Action.Equals(ValidationErrorEventAction.Removed))
                 {
-                    
                     foreach (var err in this.errorSource
                                             .OfType<ConversionError>()
                                             .Where(c => c.TargetBinding == bindingPath).ToList())

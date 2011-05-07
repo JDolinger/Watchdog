@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Windows.Controls;
     using System.Windows.Data;
+    using Jd.Wpf.Validation.Internal;
 
     public class FieldList
     {

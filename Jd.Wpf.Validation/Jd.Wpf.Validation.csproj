@@ -46,14 +46,16 @@
   <ItemGroup>
     <Compile Include="ClientUtil\ValidationCollectionExtensions.cs" />
     <Compile Include="Error.cs" />
-    <Compile Include="Field.cs" />
+    <Compile Include="Internal\Field.cs" />
     <Compile Include="IField.cs" />
+    <Compile Include="Internal\InternalValidationProperties.cs" />
+    <Compile Include="Internal\ValidationHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FieldList.cs" />
     <Compile Include="Util\CollectionWatcher.cs" />
     <Compile Include="Util\ReentrancyGuard.cs" />
     <Compile Include="ValidationProperties.cs" />
-    <Compile Include="ValidationScope.cs" />
+    <Compile Include="Internal\ValidationScope.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

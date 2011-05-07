@@ -4,13 +4,14 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Controls.Primitives;
+    using Jd.Wpf.Validation.Internal;
 
     public static class ValidationProperties
     {
         public static readonly DependencyProperty ErrorSourceProperty =
             DependencyProperty.RegisterAttached("ErrorSource", typeof (ICollection<IError>), typeof (ValidationProperties), new FrameworkPropertyMetadata(null, OnErrorSourceChanged));
 
-        public static readonly DependencyProperty ScopeProperty =
+        internal static readonly DependencyProperty ScopeProperty =
             DependencyProperty.RegisterAttached("Scope", typeof (ValidationScope), typeof (ValidationProperties), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.Inherits, OnScopeChanged));
 
         public static readonly DependencyProperty BoundPropertyProperty =
@@ -46,12 +47,12 @@
             obj.SetValue(BoundPropertyProperty, value);
         }
 
-        public static ValidationScope GetScope(DependencyObject obj)
+        internal static ValidationScope GetScope(DependencyObject obj)
         {
             return (ValidationScope) obj.GetValue(ScopeProperty);
         }
 
-        public static void SetScope(DependencyObject obj, ValidationScope value)
+        internal static void SetScope(DependencyObject obj, ValidationScope value)
         {
             obj.SetValue(ScopeProperty, value);
         }

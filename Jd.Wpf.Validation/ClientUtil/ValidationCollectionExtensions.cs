@@ -7,7 +7,11 @@
     {
         public static void Add(this ICollection<IError> collection, string targetField, string message)
         {
-            collection.Add(new Error(targetField, message));
+            var err = new Error(targetField, message);
+            if (!collection.Contains(err))
+            {
+                collection.Add(new Error(targetField, message));
+            }
         }
 
         public static void ClearField(this ICollection<IError> collection, string target)
