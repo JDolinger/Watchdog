@@ -56,7 +56,7 @@
                     {
                         NotifyOnValidationError = true,
                         Source = element,
-                        Path = new PropertyPath(ValidationSourceProperty)
+                        Path = new PropertyPath(ValidationSourceProperty),
                     };
 
                     this.errorHostingBindingExpr = BindingOperations.SetBinding(element, ValidationTargetProperty, b);
@@ -67,14 +67,18 @@
         public void Show(string message)
         {
             this.EnsureBinding();
-            this.air.ErrorContent = message;
-            Validation.MarkInvalid(this.errorHostingBindingExpr, new ValidationError(this.air, this.errorHostingBindingExpr));
+            
+            var newError = new ValidationError(this.air, this.errorHostingBindingExpr)
+            {
+                ErrorContent = message
+            };
+
+            Validation.MarkInvalid(this.errorHostingBindingExpr, newError);
         }
 
         public void Clear()
         {
             this.EnsureBinding();
-            this.air.ErrorContent = string.Empty;
             Validation.ClearInvalid(this.errorHostingBindingExpr);
         }
 
@@ -82,16 +86,9 @@
 
         private sealed class AlwaysInvalidRule : ValidationRule
         {
-            private string errorContent;
-
-            public string ErrorContent
-            {
-                set { this.errorContent = value; }
-            }
-
             public override ValidationResult Validate(object value, CultureInfo cultureInfo)
             {
-                return new ValidationResult(false, this.errorContent);
+                return new ValidationResult(false, string.Empty);
             }
         }
 

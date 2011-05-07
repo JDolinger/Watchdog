@@ -15,7 +15,6 @@
         private ICollection<IError> errorSource;
 
         private readonly CollectionWatcher<IError> errorWatcher;
-        private readonly WeakReference root;
         private readonly FieldList fieldList;
 
         private readonly ReentrancyGuard addingGuard;
@@ -27,7 +26,6 @@
                 throw new ArgumentNullException("root");    
             }
 
-            this.root = new WeakReference(root);
             this.fieldList = new FieldList();
             this.errorWatcher = new CollectionWatcher<IError>(OnAdded, OnRemoved, OnCleared);
             this.addingGuard = new ReentrancyGuard();

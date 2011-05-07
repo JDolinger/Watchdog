@@ -46,7 +46,7 @@
                 return false;
             }
 
-            if (this.GetType() != typeof(T))
+            if (obj.GetType() != typeof(T))
             {
                 return false;
             }

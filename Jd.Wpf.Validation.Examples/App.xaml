@@ -3,8 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
+        <Style x:Key="EntryBase">
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate >
+                        <StackPanel Orientation="Horizontal">
+                            <AdornedElementPlaceholder />
+                            <Image Source="Resource\button_cancel.png"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="FrameworkElement.ToolTip" 
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+
+                    <!--<Setter Property="FrameworkElement.ToolTip" 
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}"/>-->
+                </Trigger>
+            </Style.Triggers>
+          
+        </Style>
+        
         <Style x:Key="HeaderedEntry" TargetType="{x:Type HeaderedContentControl}">
-            <Setter Property="Margin" Value="5,3" />
+            <Setter Property="Margin" Value="8,3,8,3" />
             <Setter Property="IsTabStop" Value="False" />
             <Setter Property="Template">
                 <Setter.Value>
@@ -21,5 +45,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
+        <Style TargetType="{x:Type TextBox}"  BasedOn="{StaticResource EntryBase}" />            
+        
     </Application.Resources>
 </Application>

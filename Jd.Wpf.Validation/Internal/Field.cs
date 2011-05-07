@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Windows.Controls;
+    using System.Linq;
 
     internal class Field : IField
     {
@@ -28,7 +29,7 @@
         {
             this.currentErrors.Add(e);
 
-            var message = string.Join(", ", this.currentErrors);
+            var message = string.Join(", ", this.currentErrors.Select(err => err.Message));
 
             foreach (var eh in this.elementHandlers)
             {
@@ -42,7 +43,7 @@
 
             if (this.currentErrors.Count > 0)
             {
-                var message = string.Join(", ", this.currentErrors);
+                var message = string.Join(", ", this.currentErrors.Select(err => err.Message));
                 foreach (var eh in this.elementHandlers)
                 {
                     eh.Show(message);
