@@ -24,13 +24,20 @@
                 <TextBox Width="100" Text="{Binding Symbol}"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Quantity">
-                <TextBox Width="100" Text="{Binding Quantity}"/>
+                <TextBox Width="100" Text="{Binding Quantity, NotifyOnValidationError=True}"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Price">
                 <TextBox Width="100" Text="{Binding Price}"/>
             </HeaderedContentControl>
+            <TextBlock Text="{Binding ValidationErrors.Count}"/>
         </WrapPanel>
         
-        <Button Content="Book It" Grid.Row="2" Height="30" Width="80" HorizontalAlignment="Right" Margin="20"/>
+        <Button Content="Book It" 
+                Grid.Row="2" 
+                Height="30" 
+                Width="80" 
+                HorizontalAlignment="Right" 
+                Margin="20"
+                Command="{Binding BookTicketCommand}" />
     </Grid>
 </Window>

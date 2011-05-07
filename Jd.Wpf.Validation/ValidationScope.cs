@@ -1,6 +1,7 @@
 ﻿namespace Jd.Wpf.Validation
 {
     using System;
+    using System.Linq;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Diagnostics;
@@ -17,7 +18,7 @@
         private readonly WeakReference root;
         private readonly FieldList fieldList;
 
-        private ReentrancyGuard addingGuard;
+        private readonly ReentrancyGuard addingGuard;
 
         public ValidationScope(FrameworkElement root)
         {
@@ -75,13 +76,18 @@
                 {
                     var bindingProperty = ValidationProperties.GetBoundProperty(bindingTargetElement);
                     var badData = bindingTargetElement.GetValue(bindingProperty);
-
                     var conversionError = new ConversionError(bindingPath, "Invalid format", badData);
                     this.errorSource.Add(conversionError);
                 } 
                 else if (args.Action.Equals(ValidationErrorEventAction.Removed))
                 {
-                        
+                    
+                    foreach (var err in this.errorSource
+                                            .OfType<ConversionError>()
+                                            .Where(c => c.TargetBinding == bindingPath).ToList())
+                    {
+                        this.errorSource.Remove(err);
+                    }
                 }
             }
         }

@@ -8,50 +8,51 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IField.cs" caret="176" fromTop="7" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="472" fromTop="7" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:RegisteredFieldList.cs" caret="393" fromTop="15" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Error.cs" caret="1152" fromTop="17" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="1967" fromTop="13" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="330" fromTop="4" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="3432" fromTop="28" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcher.cs" caret="1332" fromTop="42" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml.cs" caret="343" fromTop="12" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:ReentrancyGuard.cs" caret="662" fromTop="31" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3876" fromTop="36" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="718" fromTop="19" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IField.cs" caret="176" fromTop="7" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:FieldList.cs" caret="373" fromTop="8" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Error.cs" caret="1152" fromTop="17" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="2240" fromTop="37" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml.cs" caret="343" fromTop="12" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2596" fromTop="72" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcher.cs" caret="0" fromTop="0" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:ClientUtil/f:ValidationCollectionExtensions.cs" caret="556" fromTop="14" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="1484" fromTop="26" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="1725" fromTop="9" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="1718" fromTop="24" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="522" fromTop="8" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="1096" fromTop="20" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="1293" fromTop="9" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="943" fromTop="2" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="940" fromTop="15" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="976" fromTop="15" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="468" fromTop="7" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2752" fromTop="31" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2752" fromTop="9" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2752" fromTop="78" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2752" fromTop="6" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2752" fromTop="13" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2752" fromTop="90" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="1599" fromTop="17" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="140" fromTop="4" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2656" fromTop="30" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="1604" fromTop="35" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="637" fromTop="11" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="405" fromTop="4" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="393" fromTop="10" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcher.cs" caret="575" fromTop="17" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcher.cs" caret="708" fromTop="22" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcher.cs" caret="847" fromTop="27" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="1766" fromTop="31" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3921" fromTop="44" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3532" fromTop="27" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3730" fromTop="29" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3880" fromTop="36" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="889" fromTop="27" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="3205" fromTop="31" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3910" fromTop="44" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3521" fromTop="27" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3719" fromTop="29" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="3869" fromTop="36" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:FieldList.cs" caret="363" fromTop="15" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="760" fromTop="19" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="2605" fromTop="33" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="2275" fromTop="25" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="1091" fromTop="8" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="1816" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="2093" fromTop="38" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="1694" fromTop="27" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="290" fromTop="10" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="524" fromTop="17" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="1417" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="875" fromTop="24" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="1554" fromTop="35" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="4276" fromTop="21" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:Field.cs" caret="2240" fromTop="37" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="3198" fromTop="33" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="3170" fromTop="31" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2525" fromTop="10" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2790" fromTop="21" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2970" fromTop="26" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="2633" fromTop="14" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationScope.cs" caret="592" fromTop="19" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="1744" fromTop="31" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:ClientUtil/f:ValidationCollectionExtensions.cs" caret="555" fromTop="14" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="1484" fromTop="26" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -67,41 +68,41 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="21" />
+      <Item value="public" priority="24" />
       <Item value="Wpf" priority="0" />
       <Item value="Validation" priority="6" />
-      <Item value="class" priority="8" />
-      <Item value="private" priority="34" />
-      <Item value="readonly" priority="8" />
-      <Item value="string" priority="22" />
+      <Item value="class" priority="9" />
+      <Item value="private" priority="36" />
+      <Item value="readonly" priority="10" />
+      <Item value="string" priority="25" />
       <Item value="ctor" priority="9" />
-      <Item value="this" priority="59" />
+      <Item value="this" priority="66" />
       <Item value="targetBinding" priority="2" />
       <Item value="message" priority="1" />
       <Item value="interface" priority="1" />
-      <Item value="void" priority="28" />
-      <Item value="Error`0" priority="8" />
+      <Item value="void" priority="30" />
+      <Item value="Error`0" priority="9" />
       <Item value="IEnumerable" priority="0" />
       <Item value="BadImageFormatException`0" priority="0" />
       <Item value="IField`0" priority="1" />
       <Item value="IDisposable`0" priority="2" />
       <Item value="bool" priority="3" />
-      <Item value="return" priority="12" />
+      <Item value="return" priority="13" />
       <Item value="false" priority="6" />
       <Item value="locked" priority="0" />
       <Item value="true" priority="5" />
-      <Item value="ICollection" priority="4" />
-      <Item value="new" priority="30" />
-      <Item value="if" priority="42" />
-      <Item value="var" priority="25" />
-      <Item value="as" priority="10" />
+      <Item value="ICollection" priority="5" />
+      <Item value="new" priority="33" />
+      <Item value="if" priority="46" />
+      <Item value="var" priority="27" />
+      <Item value="as" priority="11" />
       <Item value="incc" priority="1" />
       <Item value="INotifyCollectionChanged`0" priority="1" />
       <Item value="Action`0" priority="5" />
       <Item value="T`0" priority="6" />
       <Item value="IObservable" priority="0" />
       <Item value="ObservableCollection" priority="0" />
-      <Item value="collection" priority="1" />
+      <Item value="collection" priority="3" />
       <Item value="c" priority="5" />
       <Item value="throw" priority="4" />
       <Item value="ArgumentNullException" priority="5" />
@@ -119,13 +120,13 @@
       <Item value="UTF32Encoding`0" priority="0" />
       <Item value="CollectionWatcher&lt;Error&gt;" priority="0" />
       <Item value="internal" priority="2" />
-      <Item value="WeakReference`0" priority="1" />
+      <Item value="WeakReference`0" priority="2" />
       <Item value="managed" priority="0" />
       <Item value="WeakReference" priority="1" />
       <Item value="null" priority="4" />
       <Item value="PropertyPath`0" priority="1" />
       <Item value="ValidationScope`0" priority="2" />
-      <Item value="static" priority="2" />
+      <Item value="static" priority="5" />
       <Item value="DependencyObject`0" priority="0" />
       <Item value="DependencyPropertyChangedEventArgs`0" priority="0" />
       <Item value="obj" priority="1" />
@@ -140,7 +141,7 @@
       <Item value="FrameworkPropertyMetadata`0" priority="0" />
       <Item value="Inherits" priority="0" />
       <Item value="IDataObject`0" priority="0" />
-      <Item value="control" priority="2" />
+      <Item value="control" priority="3" />
       <Item value="GetErrorSource`0" priority="0" />
       <Item value="DependencyProperty`0" priority="3" />
       <Item value="ValidationProperties`0" priority="4" />
@@ -155,7 +156,7 @@
       <Item value="b" priority="8" />
       <Item value="Control`0" priority="2" />
       <Item value="explicitKey" priority="0" />
-      <Item value="List" priority="1" />
+      <Item value="List" priority="2" />
       <Item value="IDictionary" priority="0" />
       <Item value="Dictionary&lt;string,IField&gt;" priority="0" />
       <Item value="out" priority="4" />
@@ -173,7 +174,7 @@
       <Item value="TemplateBindingExpression`0" priority="0" />
       <Item value="ValidationRule`0" priority="2" />
       <Item value="ValidationResult" priority="0" />
-      <Item value="binding" priority="1" />
+      <Item value="binding" priority="2" />
       <Item value="Binding`0" priority="2" />
       <Item value="NothingRule" priority="1" />
       <Item value="boundControl" priority="1" />
@@ -218,6 +219,12 @@
       <Item value="Error" priority="0" />
       <Item value="v" priority="0" />
       <Item value="ForceErrorValidationRule" priority="0" />
+      <Item value="controlWeak" priority="0" />
+      <Item value="ForceErrorValidationRule`0" priority="1" />
+      <Item value="List&lt;ErrorBase&gt;" priority="0" />
+      <Item value="ICollectionView`0" priority="0" />
+      <Item value="targetField" priority="0" />
+      <Item value="toRemove" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.Error">
       <Item value="targetBinding" priority="0" />
@@ -255,6 +262,7 @@
       <Item value="Add`0" priority="0" />
       <Item value="Remove`0" priority="0" />
       <Item value="Where`1" priority="0" />
+      <Item value="Clear`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Specialized.NotifyCollectionChangedEventArgs">
       <Item value="Action" priority="1" />
@@ -267,9 +275,13 @@
       <Item value="AddControl`0" priority="0" />
       <Item value="AttachError`0" priority="0" />
       <Item value="ClearError`0" priority="0" />
+      <Item value="forceValidationRule" priority="0" />
+      <Item value="ClearAll`0" priority="0" />
+      <Item value="currentErrors" priority="2" />
+      <Item value="Equals`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.WeakReference">
-      <Item value="Target" priority="1" />
+      <Item value="Target" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Controls.Validation">
       <Item value="MarkInvalid`0" priority="3" />
@@ -361,7 +373,8 @@
       <Item value="Equals`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
-      <Item value="Add`0" priority="0" />
+      <Item value="Add`0" priority="1" />
+      <Item value="Remove`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.ConversionError">
       <Item value="invalidData" priority="0" />
@@ -375,7 +388,7 @@
       <Item value="RaisePropertyChanged`0" priority="0" />
       <Item value="ValidatePrice`0" priority="0" />
       <Item value="Price" priority="0" />
-      <Item value="validationErrors" priority="2" />
+      <Item value="validationErrors" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.Examples.MainWindow">
       <Item value="DataContext" priority="0" />
@@ -385,9 +398,13 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="First`1" priority="0" />
+      <Item value="ToList`1" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.ValidationProperties">
       <Item value="SetErrorSource`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

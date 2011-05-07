@@ -12,10 +12,10 @@
 
         public static void ClearField(this ICollection<IError> collection, string target)
         {
-            foreach (var remove in collection.Where(v => v.TargetBinding == target))
+            foreach (var remove in collection.Where(v => v.TargetBinding == target).ToList())
             {
                 collection.Remove(remove);
             }
-        }
+        }      
     }
 }

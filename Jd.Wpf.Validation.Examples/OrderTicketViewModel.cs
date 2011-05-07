@@ -2,11 +2,14 @@
 {
     using System.Collections.ObjectModel;
     using System.ComponentModel;
+    using System.Windows.Input;
     using Jd.Wpf.Validation.ClientUtil;
+    using Jd.Wpf.Validation.Examples.Util;
 
     public class OrderTicketViewModel : INotifyPropertyChanged
     {
         private readonly ObservableCollection<IError> validationErrors;
+        private readonly ICommand bookTicketCommand;
         private string side;
         private int quantity;
         private string symbol;
@@ -16,6 +19,13 @@
 
         public OrderTicketViewModel()
         {
+            this.bookTicketCommand = new DelegateCommand<object>(
+                x => this.CanBook(),
+                x =>
+                {
+                    /* nothing here for demo */
+                });
+
             this.validationErrors = new ObservableCollection<IError>();
         }
 
@@ -77,6 +87,11 @@
             get { return this.validationErrors; }
         }
 
+        public ICommand BookTicketCommand
+        {
+            get { return this.bookTicketCommand; }
+        }
+
         protected virtual void RaisePropertyChanged(string name)
         {
             var h = this.PropertyChanged;
@@ -91,11 +106,16 @@
             if (this.Price > 100)
             {
                 this.validationErrors.Add("Price", "Price should be less than 100");
-            } 
+            }
             else
             {
                 this.validationErrors.ClearField("Price");
             }
+        }
+
+        private bool CanBook()
+        {
+            return this.ValidationErrors.Count == 0;
         }
     }
 }

@@ -51,14 +51,44 @@
     {
         private readonly object invalidData;
 
-        public ConversionError(string targetBinding, string message, object invalidData) : base(targetBinding, message)
+        public ConversionError(string targetBinding, string message, object invalidData) 
+            : base(targetBinding, message)
         {
+            if (invalidData == null)
+            {
+                throw new ArgumentNullException("invalidData");
+            }
+
             this.invalidData = invalidData;
         }
 
         public object InvalidData
         {
             get { return this.invalidData; }
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (obj.GetType() != typeof(ConversionError))
+            {
+                return false;
+            }
+
+            var ce = (ConversionError) obj;
+
+            return object.Equals(
+                    this.TargetBinding, 
+                    ce.TargetBinding);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.TargetBinding.GetHashCode();
         }
     }
 }
