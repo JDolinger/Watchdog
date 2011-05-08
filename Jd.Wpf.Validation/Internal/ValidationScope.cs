@@ -30,29 +30,37 @@
     internal class ValidationScope
     {
         /// <summary>
-        /// The list of all Fields in the scope.  
+        ///     The list of all Fields in the scope.
         /// </summary>
         private readonly FieldCollection fieldList;
 
         /// <summary>
-        /// Responsible for observing the collection of <see cref="IError"/>
-        /// and notifying the scope when items are added or removed.
+        ///     Responsible for observing the collection of <see cref = "IError" />
+        ///     and notifying the scope when items are added or removed.
         /// </summary>
         private readonly CollectionWatcher<IError> errorWatcher;
 
-        /// <summary>
-        /// Guards against re-entrancy from the errorSource collection
-        /// when adding WPF conversion errors into it.  Because this can
-        /// 
-        /// 
-        /// </summary>
-        private readonly ReentrancyGuard addingGuard;
+        ///// <summary>
+        ///// Guards against re-entrancy from the errorSource collection
+        ///// when adding WPF conversion errors into it.  Because this can
+        ///// 
+        ///// 
+        ///// </summary>
+        //private readonly ReentrancyGuard addingGuard;
 
         /// <summary>
-        /// 
+        ///     The collection of <see cref = "IError" /> representing any <see cref = "Wpf.Validation.ValidationError" /> 
+        ///     which have been added to the collection, as well <see cref = "ConversionError" /> that
+        ///     the WPF framework has raised.
         /// </summary>
         private ICollection<IError> errorSource;
 
+        /// <summary>
+        ///     Initializes a new instance of the <see cref = "ValidationScope" /> class.
+        /// </summary>
+        /// <param name = "root">
+        ///     The root element of the scope where the initial <see cref = "ICollection{IError}" /> has been attached.
+        /// </param>
         public ValidationScope(FrameworkElement root)
         {
             if (root == null)
@@ -62,7 +70,7 @@
 
             this.fieldList = new FieldCollection();
             this.errorWatcher = new CollectionWatcher<IError>(this.OnAdded, this.OnRemoved, this.OnCleared);
-            this.addingGuard = new ReentrancyGuard();
+            //this.addingGuard = new ReentrancyGuard();
 
             Validation.AddErrorHandler(root, this.HandleDataConversionError);
         }
@@ -112,23 +120,28 @@
 
             //using (this.addingGuard.Set())
             //{
-                if (args.Action.Equals(ValidationErrorEventAction.Added))
+            if (args.Action.Equals(ValidationErrorEventAction.Added))
+            {
+                var bindingProperty = ValidationProperties.GetBoundProperty(bindingTargetElement);
+                var badData = bindingTargetElement.GetValue(bindingProperty);
+                var conversionError = new ConversionError(bindingPath, "Invalid format", badData);
+                this.errorSource.Add(conversionError);
+            }
+            else if (args.Action.Equals(ValidationErrorEventAction.Removed))
+            {
+                foreach (var err in this.errorSource.OfType<ConversionError>().MatchingField(bindingPath).ToList())
                 {
-                    var bindingProperty = ValidationProperties.GetBoundProperty(bindingTargetElement);
-                    var badData = bindingTargetElement.GetValue(bindingProperty);
-                    var conversionError = new ConversionError(bindingPath, "Invalid format", badData);
-                    this.errorSource.Add(conversionError);
+                    this.errorSource.Remove(err);
                 }
-                else if (args.Action.Equals(ValidationErrorEventAction.Removed))
-                {
-                    foreach (var err in this.errorSource.OfType<ConversionError>().MatchingField(bindingPath).ToList())
-                    {
-                        this.errorSource.Remove(err);
-                    }
-                }
+            }
             //}
         }
 
+        /// <summary>
+        /// Called when an <see cref="IError"/> has been added to the collection.  It handles
+        /// finding the <see cref="IField"/> with the given fieldKey and adding the error to the field.
+        /// </summary>
+        /// <param name="added">The added.</param>
         private void OnAdded(IError added)
         {
             if (added is ConversionError)
@@ -143,18 +156,23 @@
 
             //using (this.addingGuard.Set())
             //{
-                var f = this.fieldList.Find(added.FieldKey);
+            var f = this.fieldList.Find(added.FieldKey);
 
-                if (f == null)
-                {
-                    Trace.WriteLine("No registered control for validation message {0}", added.Message);
-                    return;
-                }
+            if (f == null)
+            {
+                Trace.WriteLine("No registered control for validation message {0}", added.Message);
+                return;
+            }
 
-                f.AttachError(added as ValidationError);
+            f.AttachError(added as ValidationError);
             //}
         }
 
+        /// <summary>
+        /// Called when an <see cref="IError"/> has been removed from the collection.  It handles
+        /// finding the <see cref="IField"/> with the given fieldKey and removing the error to the field.
+        /// </summary>
+        /// <param name="removed">The removed.</param>
         private void OnRemoved(IError removed)
         {
             //if (this.addingGuard.IsSet)
@@ -164,14 +182,14 @@
 
             //using (this.addingGuard.Set())
             //{
-                var f = this.fieldList.Find(removed.FieldKey);
+            var f = this.fieldList.Find(removed.FieldKey);
 
-                if (f == null)
-                {
-                    return;
-                }
+            if (f == null)
+            {
+                return;
+            }
 
-                f.ClearError(removed as ValidationError);
+            f.ClearError(removed as ValidationError);
             //}
         }
 

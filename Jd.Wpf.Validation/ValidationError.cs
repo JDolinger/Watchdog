@@ -1,69 +1,29 @@
 ﻿namespace Jd.Wpf.Validation
 {
-    using System;
-
-    public abstract class ErrorBase : IError
-    {
-        private readonly string message;
-        private readonly string fieldKey;
-
-        protected ErrorBase(string targetBinding, string message)
-        {
-            if (string.IsNullOrEmpty(targetBinding))
-            {
-                throw new ArgumentNullException("targetBinding");
-            }
-
-            if (string.IsNullOrEmpty(message))
-            {
-                throw new ArgumentNullException("message");
-            }
-
-            this.fieldKey = targetBinding;
-            this.message = message;
-        }
-
-        public string FieldKey
-        {
-            get { return this.fieldKey; }
-        }
-
-        public string Message
-        {
-            get { return this.message; }
-        }
-
-        protected bool CompareCore<T>(object obj) where T : ErrorBase
-        {
-            if (obj == null)
-            {
-                return false;
-            }
-
-            if (obj.GetType() != typeof (T))
-            {
-                return false;
-            }
-
-            var other = (T) obj;
-
-            return Equals(this.FieldKey, other.FieldKey) &&
-                   Equals(this.message, other.Message);
-        }
-
-        public override int GetHashCode()
-        {
-            return this.fieldKey.GetHashCode() ^ this.message.GetHashCode();
-        }
-    }
-
+    /// <summary>
+    ///     A Validation Error that can be used to flag a field as invalid along with a message.  This is
+    ///     for building property validation logic at the ViewModel layer, and being able to associate
+    ///     those errors back to the View.
+    /// </summary>
     public class ValidationError : ErrorBase
     {
-        public ValidationError(string targetBinding, string message) : base(targetBinding, message)
+        /// <summary>
+        ///     Initializes a new instance of the <see cref = "ValidationError" /> class.
+        /// </summary>
+        /// <param name = "fieldKey">The target binding.</param>
+        /// <param name = "message">The message.</param>
+        public ValidationError(string fieldKey, string message) : base(fieldKey, message)
         {
         }
 
 #pragma warning disable 659
+        /// <summary>
+        /// Determines whether the specified <see cref="System.Object"/> is equal to this instance.
+        /// </summary>
+        /// <param name="obj">The <see cref="System.Object"/> to compare with this instance.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified <see cref="System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+        /// </returns>
         public override bool Equals(object obj)
 #pragma warning restore 659
         {

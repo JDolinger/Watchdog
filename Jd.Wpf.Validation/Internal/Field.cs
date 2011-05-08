@@ -65,7 +65,7 @@
 
         /// <summary>
         ///     Removes the given <see cref = "ValidationError" /> from the field.
-        ///     If there are still some errors present, then the collection the message
+        ///     If there are still some errors present, then the message
         ///     is merely updated.  If no more errors will be present, then the each
         ///     <see cref = "FrameworkElement" /> is cleared of errors.
         /// </summary>

@@ -17,6 +17,10 @@
         /// </summary>
         IEnumerable<IError> Errors { get; }
 
+        /// <summary>
+        /// Adds a <see cref="FrameworkElement"/> as part of this logical field.
+        /// </summary>
+        /// <param name="element">The element.</param>
         void AddElement(FrameworkElement element);
 
         /// <summary>
