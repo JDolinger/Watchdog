@@ -21,7 +21,7 @@
         private readonly Action<T> addHandler;
 
         /// <summary>
-        ///     Callback invoked for each <see cref = "T" /> that gets removed from the collection.
+        ///     Callback invoked for each <see cref = "T" /> that gets removed from the collection. 
         /// </summary>
         private readonly Action<T> removeHandler;
 

@@ -8,56 +8,60 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml.cs" caret="373" fromTop="15" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="781" fromTop="16" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Util/f:DelegateCommand.cs" caret="1143" fromTop="41" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:MainWindow.xaml" caret="1744" fromTop="31" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:OrderTicketViewModel.cs" caret="3082" fromTop="40" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="3082" fromTop="40" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:ClientUtil/f:ValidationCollectionExtensions.cs" caret="802" fromTop="18" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="2352" fromTop="32" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IError.cs" caret="457" fromTop="12" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="79" fromTop="4" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:ReentrancyGuard.cs" caret="1341" fromTop="35" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ConversionError.cs" caret="92" fromTop="4" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="7824" fromTop="118" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:Field.cs" caret="1013" fromTop="22" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="3152" fromTop="31" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:IField.cs" caret="759" fromTop="19" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldCollection.cs" caret="673" fromTop="23" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="7135" fromTop="63" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:Field.cs" caret="2445" fromTop="41" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcherOfT.cs" caret="1112" fromTop="0" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FrameworkElementExtensions.cs" caret="0" fromTop="0" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="673" fromTop="23" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcherOfT.cs" caret="1111" fromTop="23" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:IField.cs" caret="812" fromTop="20" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:ReentrancyGuard.cs" caret="1341" fromTop="0" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ConversionError.cs" caret="2444" fromTop="56" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="2116" fromTop="42" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IError.cs" caret="457" fromTop="12" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="1214" fromTop="26" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="1822" fromTop="31" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="278" fromTop="2" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml.cs" caret="252" fromTop="9" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml.cs" caret="373" fromTop="15" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="235" fromTop="3" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml" caret="467" fromTop="7" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="1005" fromTop="20" />
     </RecentFiles>
     <RecentEdits>
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="6076" fromTop="77" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="3646" fromTop="20" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="4087" fromTop="33" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="4910" fromTop="48" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="5062" fromTop="55" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="4770" fromTop="14" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="1911" fromTop="32" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="1833" fromTop="72" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="0" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="5" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="7" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="14" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:IField.cs" caret="759" fromTop="19" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="53" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FrameworkElementExtensions.cs" caret="902" fromTop="29" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="38" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="5293" fromTop="32" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="5879" fromTop="53" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="3426" fromTop="47" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="21" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="10" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="17" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="2476" fromTop="17" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="1572" fromTop="19" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldList.cs" caret="991" fromTop="39" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FrameworkElementExtensions.cs" caret="352" fromTop="10" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FrameworkElementExtensions.cs" caret="880" fromTop="25" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FrameworkElementExtensions.cs" caret="461" fromTop="13" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="3319" fromTop="39" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:Field.cs" caret="1665" fromTop="44" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3152" fromTop="37" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3152" fromTop="41" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3152" fromTop="48" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3152" fromTop="55" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3152" fromTop="60" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3152" fromTop="91" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="2732" fromTop="58" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3033" fromTop="65" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="2446" fromTop="38" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="2553" fromTop="42" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="1374" fromTop="20" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="1374" fromTop="9" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="1374" fromTop="25" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="552" fromTop="12" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="831" fromTop="26" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="1214" fromTop="26" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml.cs" caret="195" fromTop="7" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml" caret="54" fromTop="0" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="2113" fromTop="1" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="278" fromTop="2" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml.cs" caret="252" fromTop="9" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="235" fromTop="3" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml" caret="594" fromTop="11" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml" caret="467" fromTop="7" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="1230" fromTop="16" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="1230" fromTop="15" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="1213" fromTop="20" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="1180" fromTop="12" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="415" fromTop="5" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="1005" fromTop="20" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -96,7 +100,7 @@
       <Item value="false" priority="11" />
       <Item value="locked" priority="0" />
       <Item value="true" priority="7" />
-      <Item value="ICollection" priority="11" />
+      <Item value="ICollection" priority="12" />
       <Item value="new" priority="50" />
       <Item value="if" priority="65" />
       <Item value="var" priority="38" />
@@ -130,12 +134,12 @@
       <Item value="WeakReference" priority="2" />
       <Item value="null" priority="6" />
       <Item value="PropertyPath`0" priority="2" />
-      <Item value="ValidationScope`0" priority="3" />
+      <Item value="ValidationScope`0" priority="4" />
       <Item value="static" priority="8" />
       <Item value="DependencyObject`0" priority="0" />
       <Item value="DependencyPropertyChangedEventArgs`0" priority="0" />
       <Item value="obj" priority="5" />
-      <Item value="FrameworkElement`0" priority="13" />
+      <Item value="FrameworkElement`0" priority="14" />
       <Item value="fe" priority="1" />
       <Item value="GetScope`0" priority="0" />
       <Item value="scope" priority="1" />
@@ -263,7 +267,7 @@
       <Item value="ValidationHandler`0" priority="2" />
       <Item value="errorHostingBinding" priority="1" />
       <Item value="BindingOperations`0" priority="0" />
-      <Item value="ValidationError" priority="1" />
+      <Item value="ValidationError" priority="2" />
       <Item value="sealed" priority="0" />
       <Item value="AlwaysInvalidRule`0" priority="0" />
       <Item value="AlwaysInvalidRule" priority="0" />
@@ -546,6 +550,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.Internal.ValidationScope">
       <Item value="fieldList" priority="0" />
+      <Item value="errorSource" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

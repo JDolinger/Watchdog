@@ -1,7 +1,7 @@
 ﻿<Application x:Class="Jd.Wpf.Validation.Examples.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Views\DemoDriver.xaml">
     <Application.Resources>
         
         <Style x:Key="EntryBase">

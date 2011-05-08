@@ -55,7 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="ViewModels\PasswordViewModel.cs" />
+    <Compile Include="Views\PasswordCreation.xaml.cs">
+      <DependentUpon>PasswordCreation.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\OrderEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DemoDriver.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -64,13 +72,20 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Util\DelegateCommand.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Views\OrderEntry.xaml.cs">
+      <DependentUpon>OrderEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoDriver.xaml.cs">
+      <DependentUpon>DemoDriver.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\PasswordCreation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrderTicketViewModel.cs" />
+    <Compile Include="ViewModels\OrderTicketViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
