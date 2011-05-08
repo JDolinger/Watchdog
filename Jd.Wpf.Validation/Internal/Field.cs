@@ -3,16 +3,17 @@
     using System.Collections.Generic;
     using System.Windows.Controls;
     using System.Linq;
+    using ValidationError = Jd.Wpf.Validation.ValidationError;
 
     internal class Field : IField
     {
-        private readonly List<Error> currentErrors;
+        private readonly List<ValidationError> currentErrors;
         private readonly IList<ValidationHandler> elementHandlers;
 
         public Field()
         {
             this.elementHandlers = new List<ValidationHandler>();
-            this.currentErrors = new List<Error>();
+            this.currentErrors = new List<ValidationError>();
         }
 
         public IEnumerable<IError> Errors
@@ -25,7 +26,7 @@
             this.elementHandlers.Add(new ValidationHandler(control));
         }
 
-        public void AttachError(Error e)
+        public void AttachError(ValidationError e)
         {
             this.currentErrors.Add(e);
 
@@ -37,7 +38,7 @@
             }
         }
 
-        public void ClearError(Error e)
+        public void ClearError(ValidationError e)
         {
             this.currentErrors.Remove(e);
 

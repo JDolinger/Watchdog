@@ -8,7 +8,9 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Data;
+    using Jd.Wpf.Validation.ClientUtil;
     using Jd.Wpf.Validation.Util;
+    using ValidationError = Jd.Wpf.Validation.ValidationError;
 
     internal class ValidationScope
     {
@@ -53,7 +55,7 @@
 
         private void HandleDataConversionError(object sender, ValidationErrorEventArgs args)
         {
-            if (this.addingGuard.IsSet())
+            if (this.addingGuard.IsSet)
             {
                 return;
             }
@@ -79,9 +81,7 @@
                 } 
                 else if (args.Action.Equals(ValidationErrorEventAction.Removed))
                 {
-                    foreach (var err in this.errorSource
-                                            .OfType<ConversionError>()
-                                            .Where(c => c.TargetBinding == bindingPath).ToList())
+                    foreach (var err in this.errorSource.OfType<ConversionError>().MatchingField(bindingPath).ToList())
                     {
                         this.errorSource.Remove(err);
                     }
@@ -91,14 +91,14 @@
 
         private void OnAdded(IError added)
         {
-            if (this.addingGuard.IsSet())
+            if (this.addingGuard.IsSet)
             {
                 return;
             }
 
             using (addingGuard.Set())
             {
-                var f = this.fieldList.FindField(added.TargetBinding);
+                var f = this.fieldList.FindField(added.FieldKey);
 
                 if (f == null)
                 {
@@ -106,27 +106,27 @@
                     return;
                 }
 
-                f.AttachError(added as Error);
+                f.AttachError(added as ValidationError);
             }
         }
 
         private void OnRemoved(IError removed)
         {
-            if (this.addingGuard.IsSet())
+            if (this.addingGuard.IsSet)
             {
                 return;
             }
 
             using (addingGuard.Set())
             {
-                var f = this.fieldList.FindField(removed.TargetBinding);
+                var f = this.fieldList.FindField(removed.FieldKey);
 
                 if (f == null)
                 {
                     return;
                 }
 
-                f.ClearError(removed as Error);
+                f.ClearError(removed as ValidationError);
             }
             
         }

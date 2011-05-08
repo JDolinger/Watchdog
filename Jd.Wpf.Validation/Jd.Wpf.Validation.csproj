@@ -45,9 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientUtil\ValidationCollectionExtensions.cs" />
-    <Compile Include="Error.cs" />
+    <Compile Include="ValidationError.cs" />
+    <Compile Include="IError.cs" />
     <Compile Include="Internal\Field.cs" />
-    <Compile Include="IField.cs" />
+    <Compile Include="Internal\IField.cs" />
     <Compile Include="Internal\InternalValidationProperties.cs" />
     <Compile Include="Internal\ValidationHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,9 +57,6 @@
     <Compile Include="Util\ReentrancyGuard.cs" />
     <Compile Include="ValidationProperties.cs" />
     <Compile Include="Internal\ValidationScope.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="button_cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

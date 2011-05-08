@@ -63,11 +63,11 @@
                 }
             }
         }
-        
+
         public void Show(string message)
         {
             this.EnsureBinding();
-            
+
             var newError = new ValidationError(this.air, this.errorHostingBindingExpr)
             {
                 ErrorContent = message

@@ -109,7 +109,7 @@
             }
             else
             {
-                this.validationErrors.ClearField("Price");
+                this.validationErrors.ClearValidationError("Price");
             }
         }
 

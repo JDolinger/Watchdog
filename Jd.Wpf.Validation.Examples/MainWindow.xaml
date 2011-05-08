@@ -21,14 +21,15 @@
                 </ComboBox>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Symbol">
-                <TextBox Width="100" Text="{Binding Symbol}"/>
+                <TextBox Width="100" Text="{Binding Symbol, NotifyOnValidationError=True}"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Quantity">
                 <TextBox Width="100" Text="{Binding Quantity, NotifyOnValidationError=True}"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Price">
-                <TextBox Width="100" Text="{Binding Price}"/>
+                <TextBox Width="100" Text="{Binding Price, NotifyOnValidationError=True}"/>
             </HeaderedContentControl>
+
             <TextBlock Text="{Binding ValidationErrors.Count}"/>
         </WrapPanel>
         
