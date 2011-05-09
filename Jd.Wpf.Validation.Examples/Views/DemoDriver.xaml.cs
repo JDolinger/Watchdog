@@ -1,5 +1,6 @@
 ﻿namespace Jd.Wpf.Validation.Examples
 {
+    using System;
     using System.Windows;
 
     /// <summary>
@@ -11,6 +12,11 @@
         {
             this.InitializeComponent();
             this.DataContext = new OrderTicketViewModel();
+        }
+
+        ~DemoDriver()
+        {
+            Console.WriteLine("GCing Demo");    
         }
     }
 }
