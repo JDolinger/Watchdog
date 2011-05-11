@@ -8,7 +8,6 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Data;
-    using System.Windows.Threading;
     using Jd.Wpf.Validation.ClientUtil;
     using Jd.Wpf.Validation.Util;
     using ValidationError = Jd.Wpf.Validation.ValidationError;
@@ -47,7 +46,7 @@
         ///// 
         ///// 
         ///// </summary>
-        private readonly ReentrancyGuard addingGuard;
+        private readonly RunAfterDispatchCommand reattachErrorCommand;
 
         /// <summary>
         ///     The collection of <see cref = "IError" /> representing any <see cref = "Wpf.Validation.ValidationError" /> 
@@ -71,70 +70,35 @@
 
             this.fieldList = new FieldCollection();
             this.errorWatcher = new CollectionWatcher<IError, ValidationError>(this.OnAdded, this.OnRemoved, this.OnCleared);
-            this.addingGuard = new ReentrancyGuard();
+            this.reattachErrorCommand = new RunAfterDispatchCommand(this.ReattachConversionErrors);
 
             Validation.AddErrorHandler(root, this.HandleDataConversionError);
         }
-
-        private bool changingDc;
 
         public ICollection<IError> ErrorSource
         {
             set
             {
-                this.errorWatcher.Detach();
-                    if (this.errorSource != null)
-                    {
-                        foreach (var item in this.errorSource.OfType<ValidationError>().ToList())
-                        {
-                            this.OnRemoved(item);
-                        }
-                    }
+                var o = value as ObservableCollection<IError>;
+                this.errorSource = o;
+                this.errorWatcher.Attach(o); // if null, this will at least unsubscribe any old collection.
+                this.reattachErrorCommand.Execute();
+            }
+        }
 
-                      var o = value as ObservableCollection<IError>;
-                    this.errorSource = o;
-
-                    if (this.errorSource != null)
-                    {
-                        foreach (var item in this.errorSource.OfType<ValidationError>().ToList())
-                        {
-                            this.OnAdded(item);
-                        }
-                    }
-                    this.errorWatcher.Attach(o);  // if null, this will at least unsubscribe any old collection.
-
-                changingDc = true;
-
-                Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() =>
+        private void ReattachConversionErrors()
+        {
+            if (this.errorSource != null)
+            {
+                foreach (var item in this.errorSource.OfType<ConversionError>().ToList())
                 {
-                    
-                    this.changingDc = false;
-
-                    if (this.errorSource != null)
+                    var f = this.fieldList.Find(item.FieldKey);
+                    if (f != null)
                     {
-                        foreach (var item in this.errorSource.OfType<ConversionError>().ToList())
-                        {
-                            var f = this.fieldList.Find(item.FieldKey);
-                            if (f != null)
-                            {
-                                using (this.addingGuard.Set())
-                                {
-                                    f.AttachError(item);
-                                }
-                            }
-                        }
+                        f.AttachError(item);
                     }
-
-                }));
-                
-                  
-
-                    // foreach (var item in value.ToList())
-                    //{
-                    //    this.OnAdded(item);
-                    //}
                 }
-
+            }
         }
 
         internal void Register(FrameworkElement element)
@@ -152,15 +116,12 @@
 
         private void HandleDataConversionError(object sender, ValidationErrorEventArgs args)
         {
-        if (changingDc)
-        {
-            return;
-        }
-            if (this.addingGuard.IsSet)
+            if (this.reattachErrorCommand.ActiveWaiting)
             {
                 return;
             }
-            Console.WriteLine(  "Conversion error {0}" + args.Action);
+
+            Console.WriteLine("Conversion error {0}" + args.Action);
             var bindingTargetElement = args.OriginalSource as FrameworkElement;
             var erroredExpression = args.Error.BindingInError as BindingExpression;
 
@@ -170,8 +131,8 @@
             }
 
             var bindingPath = erroredExpression.ParentBinding.Path.Path;
-            
-                    if (args.Action.Equals(ValidationErrorEventAction.Added))
+
+            if (args.Action.Equals(ValidationErrorEventAction.Added))
             {
                 var bindingProperty = ValidationProperties.GetBoundProperty(bindingTargetElement);
                 var badData = bindingTargetElement.GetValue(bindingProperty);
@@ -185,18 +146,17 @@
                     this.errorSource.Remove(err);
                 }
             }
-        
         }
 
         /// <summary>
-        /// Called when an <see cref="IError"/> has been added to the collection.  It handles
-        /// finding the <see cref="IField"/> with the given fieldKey and adding the error to the field.
+        ///     Called when an <see cref = "IError" /> has been added to the collection.  It handles
+        ///     finding the <see cref = "IField" /> with the given fieldKey and adding the error to the field.
         /// </summary>
-        /// <param name="added">The added.</param>
+        /// <param name = "added">The added.</param>
         private void OnAdded(ValidationError added)
         {
             var f = this.fieldList.Find(added.FieldKey);
-         
+
             if (f == null)
             {
                 Trace.WriteLine("No registered control for validation message {0}", added.Message);
@@ -207,10 +167,10 @@
         }
 
         /// <summary>
-        /// Called when an <see cref="IError"/> has been removed from the collection.  It handles
-        /// finding the <see cref="IField"/> with the given fieldKey and removing the error to the field.
+        ///     Called when an <see cref = "IError" /> has been removed from the collection.  It handles
+        ///     finding the <see cref = "IField" /> with the given fieldKey and removing the error to the field.
         /// </summary>
-        /// <param name="removed">The removed.</param>
+        /// <param name = "removed">The removed.</param>
         private void OnRemoved(ValidationError removed)
         {
             var f = this.fieldList.Find(removed.FieldKey);

@@ -83,6 +83,7 @@
             }
 
             this.collection = newCollection;
+            this.ReportAdds(this.collection);
             this.collection.CollectionChanged += this.HandleCollectionChanged;
         }
 
@@ -91,6 +92,7 @@
             if (this.collection != null)
             {
                 this.collection.CollectionChanged -= this.HandleCollectionChanged;
+                this.ReportRemoves(this.collection);
             }
         }
 
