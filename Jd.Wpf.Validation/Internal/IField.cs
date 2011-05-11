@@ -29,6 +29,8 @@
         /// <param name = "e">The error.</param>
         void AttachError(ValidationError e);
 
+        void AttachError(ConversionError e);
+
         /// <summary>
         ///     Remove the given <see cref = "ValidationError" /> from the field.
         /// </summary>

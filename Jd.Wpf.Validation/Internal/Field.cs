@@ -103,5 +103,13 @@
                 eh.Clear();
             }
         }
+
+        public void AttachError(ConversionError e)
+        {
+            foreach (var er in this.elementHandlers)
+            {
+                er.CreateValError(e);
+            }
+        }
     }
 }

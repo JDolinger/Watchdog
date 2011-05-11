@@ -105,6 +105,25 @@
             Validation.MarkInvalid(this.errorHostingBindingExpr, newError);
         }
 
+        public void CreateValError(ConversionError e)
+        {
+            Console.WriteLine("Reattaching conversion error");
+            var t = this.controlRef.Target as FrameworkElement;
+
+            if (t != null)
+            {
+                var prop = ValidationProperties.GetBoundProperty(t);
+                  t.SetValue(prop, e.InvalidData);
+                    BindingOperations.GetBindingExpression(t, prop).UpdateSource();
+                //t.Dispatcher.BeginInvoke(new Action(() =>
+                //{
+                //    t.SetValue(prop, e.InvalidData);
+                //    BindingOperations.GetBindingExpression(t, prop).UpdateSource();
+                   
+                //}));
+            }
+        }
+
         /// <summary>
         ///     Clears the errorHostingBindingExpr of any validation errors.
         /// </summary>
@@ -138,7 +157,6 @@
                     // ValidationTarget properties to the element!  I guess creating the Binding is enough!
                     var b = new Binding
                     {
-                        NotifyOnValidationError = true,
                         Source = element,
                         Path = new PropertyPath(ValidationSourceProperty),
                     };

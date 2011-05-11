@@ -10,7 +10,7 @@
         public OrderEntry()
         {
             this.InitializeComponent();
-            this.DataContext = new OrderTicketViewModel();
+           // this.DataContext = new OrderTicketViewModel();
         }
     }
 }

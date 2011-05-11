@@ -12,6 +12,8 @@
             <Views:OrderEntry />    
         </TabItem>
         
-        <TabItem Header="Master-Detail Demo"/>
+        <TabItem Header="Master-Detail Demo">
+            <Views:MasterDetail />
+        </TabItem>
     </TabControl>
 </Window>

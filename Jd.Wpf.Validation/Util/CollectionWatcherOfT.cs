@@ -5,6 +5,7 @@
     using System.Collections.ObjectModel;
     using System.Collections.Specialized;
     using System.Linq;
+    using System.Collections.Generic;
 
     /// <summary>
     ///     A utility which watches a <see cref = "ObserablveCollection{T}" />.  When the
@@ -13,17 +14,17 @@
     ///     move the typical boilerplate out of the classes which must be respond to these events.
     /// </summary>
     /// <typeparam name = "T">The type contained in the collection being watched.</typeparam>
-    public class CollectionWatcher<T>
+    public class CollectionWatcher<T, TFilter>
     {
         /// <summary>
         ///     Callback invoked for each <see cref = "T" /> that gets added to the collection.
         /// </summary>
-        private readonly Action<T> addHandler;
+        private readonly Action<TFilter> addHandler;
 
         /// <summary>
         ///     Callback invoked for each <see cref = "T" /> that gets removed from the collection. 
         /// </summary>
-        private readonly Action<T> removeHandler;
+        private readonly Action<TFilter> removeHandler;
 
         /// <summary>
         ///     Callback invoked when the collection has dramatically changed.
@@ -41,7 +42,7 @@
         /// <param name = "addHandler">The add handler.</param>
         /// <param name = "removeHandler">The remove handler.</param>
         /// <param name = "resetHandler">The reset handler.</param>
-        public CollectionWatcher(Action<T> addHandler, Action<T> removeHandler, Action resetHandler)
+        public CollectionWatcher(Action<TFilter> addHandler, Action<TFilter> removeHandler, Action resetHandler)
         {
             if (addHandler == null)
             {
@@ -70,18 +71,27 @@
         /// <param name = "newCollection">The new collection.</param>
         public void Watch(ObservableCollection<T> newCollection)
         {
+            this.Detach();
+            this.Attach(newCollection);
+        }
+
+        public void Attach(ObservableCollection<T> newCollection)
+        {
             if (newCollection == null)
             {
                 throw new ArgumentNullException("newCollection");
             }
 
+            this.collection = newCollection;
+            this.collection.CollectionChanged += this.HandleCollectionChanged;
+        }
+
+        public void Detach()
+        {
             if (this.collection != null)
             {
                 this.collection.CollectionChanged -= this.HandleCollectionChanged;
             }
-
-            this.collection = newCollection;
-            this.collection.CollectionChanged += this.HandleCollectionChanged;
         }
 
         /// <summary>
@@ -115,7 +125,12 @@
         /// <param name = "newItems">The list of new item.</param>
         private void ReportAdds(IList newItems)
         {
-            foreach (var i in newItems.Cast<T>())
+            foreach (var i in newItems)
+            {
+                Console.WriteLine("Item added:" + i.GetType());
+            }
+
+            foreach (var i in newItems.OfType<TFilter>().ToList())
             {
                 this.addHandler(i);
             }
@@ -128,7 +143,7 @@
         /// <param name = "removedItems">The list of new item.</param>
         private void ReportRemoves(IList removedItems)
         {
-            foreach (var i in removedItems.Cast<T>())
+            foreach (var i in removedItems.OfType<TFilter>())
             {
                 this.removeHandler(i);
             }

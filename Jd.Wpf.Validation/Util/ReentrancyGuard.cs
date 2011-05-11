@@ -38,22 +38,15 @@
         /// <summary>
         ///     Whether the guard is currently in effect.
         /// </summary>
-        private bool isSet;
+        //private bool isSet;
 
+        private int count;
         /// <summary>
         ///     Gets a value the value of the <see cref = "isSet" /> field.
         /// </summary>
         public bool IsSet
         {
-            get { return this.isSet; }
-        }
-
-        /// <summary>
-        ///     Releases unmanaged and - optionally - managed resources
-        /// </summary>
-        public void Dispose()
-        {
-            this.isSet = true;
+            get { return this.count > 0; }
         }
 
         /// <summary>
@@ -91,7 +84,7 @@
             public ExitToken(ReentrancyGuard g)
             {
                 this.guard = g;
-                this.guard.isSet = true;
+                this.guard.count++;
             }
 
             /// <summary>
@@ -99,7 +92,8 @@
             /// </summary>
             public void Dispose()
             {
-                this.guard.isSet = false;
+                               this.guard.count--;
+
             }
         }
 
