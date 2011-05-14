@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.ComponentModel;
     using System.Diagnostics;
     using System.Linq;
     using System.Windows;
@@ -32,7 +33,7 @@
         /// <summary>
         ///     The list of all Fields in the scope.
         /// </summary>
-        private readonly FieldCollection fieldList;
+        private readonly FieldMap fieldList;
 
         /// <summary>
         ///     Responsible for observing the collection of <see cref = "IError" />
@@ -40,12 +41,7 @@
         /// </summary>
         private readonly CollectionWatcher<IError, ValidationError> errorWatcher;
 
-        ///// <summary>
-        ///// Guards against re-entrancy from the errorSource collection
-        ///// when adding WPF conversion errors into it.  Because this can
-        ///// 
-        ///// 
-        ///// </summary>
+       
         private readonly RunAfterDispatchCommand reattachErrorCommand;
 
         /// <summary>
@@ -68,7 +64,7 @@
                 throw new ArgumentNullException("root");
             }
 
-            this.fieldList = new FieldCollection();
+            this.fieldList = new FieldMap();
             this.errorWatcher = new CollectionWatcher<IError, ValidationError>(this.OnAdded, this.OnRemoved, this.OnCleared);
             this.reattachErrorCommand = new RunAfterDispatchCommand(this.ReattachConversionErrors);
 
@@ -81,7 +77,7 @@
             {
                 var o = value as ObservableCollection<IError>;
                 this.errorSource = o;
-                this.errorWatcher.Attach(o); // if null, this will at least unsubscribe any old collection.
+                this.errorWatcher.Watch(o); // if null, this will at least unsubscribe any old collection.
                 this.reattachErrorCommand.Execute();
             }
         }
@@ -185,6 +181,12 @@
 
         private void OnCleared()
         {
+            //foreach (var f in this.fieldList)
+            //{
+            //    f.ClearAll();
+            //}
+
+            //foreach (var )
         }
     }
 }

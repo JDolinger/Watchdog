@@ -55,7 +55,7 @@
     <Compile Include="Internal\IField.cs" />
     <Compile Include="Internal\ElementValidationHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Internal\FieldCollection.cs" />
+    <Compile Include="Internal\FieldMap.cs" />
     <Compile Include="Util\CollectionWatcherOfT.cs" />
     <Compile Include="Util\ReentrancyGuard.cs" />
     <Compile Include="ValidationProperties.cs" />
