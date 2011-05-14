@@ -48,6 +48,9 @@
     <Compile Include="ConversionError.cs" />
     <Compile Include="ErrorBase.cs" />
     <Compile Include="Internal\FrameworkElementExtensions.cs" />
+    <Compile Include="Internal\SuspendableBindingConverter.cs" />
+    <Compile Include="Internal\TypeData.cs" />
+    <Compile Include="WatchdogBinding.cs" />
     <Compile Include="Util\RunAfterDispatchCommand.cs" />
     <Compile Include="ValidationError.cs" />
     <Compile Include="IError.cs" />

@@ -189,4 +189,94 @@
 
         #endregion
     }
+
+    public class BindingAccessor
+    {
+        private readonly Binding b;
+
+        public BindingAccessor(Binding b)
+        {
+            this.b = b;
+        }
+        public Binding GetSource()
+        {
+            return b;
+        }
+    }
+
+    public class SafeTypeToStringConverter : IValueConverter
+    {
+        #region IValueConverter Members
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value != null ? value.ToString() : string.Empty;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var stringValue = value as string;
+            
+            if (stringValue != null)
+            {
+                if (targetType == typeof(Int32))
+                {
+                    int i;
+                    if (Int32.TryParse(stringValue, out i))
+                    {
+                        return i;
+                    }
+                }    
+
+                if (targetType == typeof(Int64))
+                {
+                    long l;
+                    if (Int64.TryParse(stringValue, out l))
+                    {
+                        return l;
+                    }
+                }    
+  
+                if (targetType == typeof(bool))
+                {
+                    bool b;
+                    if (Boolean.TryParse(stringValue, out b))
+                    {
+                        return b;
+                    }
+                }      
+
+                if (targetType == typeof(decimal))
+                {
+                    decimal d;
+                    if (Decimal.TryParse(stringValue, out d))
+                    {
+                        return d;
+                    }
+                }      
+
+                if (targetType == typeof(double))
+                {
+                    double db;
+                    if (Double.TryParse(stringValue, out db))
+                    {
+                        return db;
+                    }
+                }    
+
+                if (targetType == typeof(DateTime))
+                {
+                    DateTime dt;
+                    if (DateTime.TryParse(stringValue, out dt))
+                    {
+                        return dt;
+                    }
+                }    
+            }
+
+            return DependencyProperty.UnsetValue;
+        }
+
+        #endregion
+    }
 }

@@ -134,6 +134,22 @@
                 var badData = bindingTargetElement.GetValue(bindingProperty);
                 var conversionError = new ConversionError(bindingPath, string.Format("Invalid format {0}", bindingProperty), badData);
                 this.errorSource.Add(conversionError);
+
+                var props = TypeDescriptor.GetProperties(erroredExpression.DataItem);
+                var p = props.Find(bindingPath, false);
+                if (p != null)
+                {
+                    var wdb = erroredExpression.ParentBinding as WatchdogBinding;
+                    if (wdb != null)
+                    {
+                        if (wdb.ResetOnConvertFailure)
+                        {
+                            wdb.SuspendTransfer = true;
+                            p.SetValue(erroredExpression.DataItem, TypeData.DefaultValue(p.PropertyType));
+                            wdb.SuspendTransfer = false;
+                        }
+                    }
+                }
             }
             else if (args.Action.Equals(ValidationErrorEventAction.Removed))
             {

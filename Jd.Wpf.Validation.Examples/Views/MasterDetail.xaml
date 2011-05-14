@@ -7,11 +7,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Button Content="New Order" Command="{Binding NewOrderCommand}" HorizontalAlignment="Left" Margin="10"/>
         <Views:OrderEntry Grid.Row="1" DataContext="{Binding AllOrders}" />
-        <ListView ItemsSource="{Binding AllOrders}" Grid.Row="2" IsSynchronizedWithCurrentItem="True">
+        <Button Grid.Row="2" Content="New Order" Command="{Binding NewOrderCommand}" HorizontalAlignment="Left" Margin="20,0,20,10" Width="80" Height="30"/>
+        <ListView ItemsSource="{Binding AllOrders}" Grid.Row="3" IsSynchronizedWithCurrentItem="True">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>

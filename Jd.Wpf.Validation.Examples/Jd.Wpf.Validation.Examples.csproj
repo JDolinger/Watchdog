@@ -66,6 +66,9 @@
     <Compile Include="Views\PasswordCreation.xaml.cs">
       <DependentUpon>PasswordCreation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TradingParameters.xaml.cs">
+      <DependentUpon>TradingParameters.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\Launcher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +98,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\PasswordCreation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TradingParameters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

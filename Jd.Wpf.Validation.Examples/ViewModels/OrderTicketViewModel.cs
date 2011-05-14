@@ -2,6 +2,8 @@
 {
     using System.Collections.ObjectModel;
     using System.ComponentModel;
+    using System.Globalization;
+    using System.Windows.Data;
     using System.Windows.Input;
     using Jd.Wpf.Validation.ClientUtil;
     using Jd.Wpf.Validation.Examples.Util;
@@ -14,6 +16,7 @@
         private int quantity;
         private string symbol;
         private decimal price;
+        private decimal total;
 
         private int currentPosition;
 
@@ -47,6 +50,7 @@
             set
             {
                 this.quantity = value;
+                this.CalculateTotal();
                 this.RaisePropertyChanged("Quantity");
             }
         }
@@ -68,7 +72,18 @@
             {
                 this.price = value;
                 this.RaisePropertyChanged("Price");
+                this.CalculateTotal();
                 this.ValidatePrice();
+            }
+        }
+
+        public decimal Total
+        {
+            get { return this.total; }
+            set
+            {
+                this.total = value;
+                this.RaisePropertyChanged("Total");
             }
         }
 
@@ -113,9 +128,32 @@
             }
         }
 
+        private void CalculateTotal()
+        {
+            this.Total = this.Price * this.Quantity;
+        }
+
         private bool CanBook()
         {
             return this.ValidationErrors.Count == 0;
         }
     }
+
+    public class Tet : IValueConverter
+    {
+        #region IValueConverter Members
+
+        public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public object ConvertBack(object value, System.Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
+    }
+
 }
