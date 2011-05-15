@@ -1,14 +1,13 @@
-﻿namespace Jd.Wpf.Validation.Util
+﻿namespace Watchdog.Validation.Core.Util
 {
     using System;
     using System.Collections;
     using System.Collections.ObjectModel;
     using System.Collections.Specialized;
     using System.Linq;
-    using System.Collections.Generic;
 
     /// <summary>
-    ///     A utility which watches a <see cref = "ObserablveCollection{T}" />.  When the
+    ///     A utility which watches a <see cref = "ObservableCollection{T}" />.  When the
     ///     collection raises <see cref = "System.Collections.Specialized.INotifyCollectionChanged" /> event, it
     ///     calls back the provided Actions corresponding to each type of event.  This class simple helps you
     ///     move the typical boilerplate out of the classes which must be respond to these events.
@@ -22,7 +21,7 @@
         private readonly Action<TFilter> addHandler;
 
         /// <summary>
-        ///     Callback invoked for each <see cref = "T" /> that gets removed from the collection. 
+        ///     Callback invoked for each <see cref = "T" /> that gets removed from the collection.
         /// </summary>
         private readonly Action<TFilter> removeHandler;
 

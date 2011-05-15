@@ -1,4 +1,4 @@
-﻿namespace Jd.Wpf.Validation.Util
+﻿namespace Watchdog.Validation.Core.Util
 {
     using System;
     using System.Windows.Threading;

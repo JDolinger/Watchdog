@@ -1,4 +1,4 @@
-﻿namespace Jd.Wpf.Validation.Internal
+﻿namespace Watchdog.Validation.Core.Internal
 {
     using System;
     using System.Collections.Generic;
@@ -9,9 +9,9 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Data;
-    using Jd.Wpf.Validation.ClientUtil;
-    using Jd.Wpf.Validation.Util;
-    using ValidationError = Jd.Wpf.Validation.ValidationError;
+    using Watchdog.Validation.Core.ClientUtil;
+    using Watchdog.Validation.Core.Util;
+    using ValidationError = Watchdog.Validation.Core.ValidationError;
 
     /// <summary>
     ///     The implementation of validation management for a portion of a
@@ -41,7 +41,6 @@
         /// </summary>
         private readonly CollectionWatcher<IError, ValidationError> errorWatcher;
 
-       
         private readonly RunAfterDispatchCommand reattachErrorCommand;
 
         /// <summary>

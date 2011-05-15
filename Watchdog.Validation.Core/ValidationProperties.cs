@@ -1,10 +1,10 @@
-﻿namespace Jd.Wpf.Validation
+﻿namespace Watchdog.Validation.Core
 {
     using System.Collections.Generic;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Controls.Primitives;
-    using Jd.Wpf.Validation.Internal;
+    using Watchdog.Validation.Core.Internal;
 
     public static class ValidationProperties
     {

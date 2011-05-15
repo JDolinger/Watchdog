@@ -1,4 +1,4 @@
-﻿namespace Jd.Wpf.Validation.ClientUtil
+﻿namespace Watchdog.Validation.Core.ClientUtil
 {
     using System.Collections.Generic;
     using System.Linq;

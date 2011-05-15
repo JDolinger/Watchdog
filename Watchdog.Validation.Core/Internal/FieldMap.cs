@@ -1,4 +1,4 @@
-﻿namespace Jd.Wpf.Validation.Internal
+﻿namespace Watchdog.Validation.Core.Internal
 {
     using System.Collections;
     using System.Collections.Generic;

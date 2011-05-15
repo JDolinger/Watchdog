@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
         xmlns:Views="clr-namespace:Jd.Wpf.Validation.Examples.Views" 
         xmlns:sys="clr-namespace:System;assembly=mscorlib" 
-        xmlns:Internal="clr-namespace:Jd.Wpf.Validation.Internal;assembly=Jd.Wpf.Validation" xmlns:Validation1="clr-namespace:Jd.Wpf.Validation;assembly=Watchdog.Validation.Core">
+        xmlns:Core="clr-namespace:Watchdog.Validation.Core;assembly=Watchdog.Validation.Core">
 
     <UserControl.Resources>
         <x:Array x:Key="TradeTypeList" Type="{x:Type sys:String}">
@@ -12,7 +12,7 @@
             <sys:String>Short</sys:String>
         </x:Array>
     </UserControl.Resources>
-    <Grid Validation1:ValidationProperties.ErrorSource="{Binding ValidationErrors}">
+    <Grid Core:ValidationProperties.ErrorSource="{Binding ValidationErrors}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -34,10 +34,10 @@
                 <TextBox Width="100" Text="{Binding Symbol, NotifyOnValidationError=True}"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Quantity">
-                <TextBox Width="100" Text="{Validation1:WatchdogBinding Quantity, UseGenericTextConverter=True}"/>
+                <TextBox Width="100" Text="{Core:WatchdogBinding Quantity, UseGenericTextConverter=True}"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Price">
-                <TextBox Width="100" Text="{Validation1:WatchdogBinding Price, UseGenericTextConverter=True}"/>
+                <TextBox Width="100" Text="{Core:WatchdogBinding Price, UseGenericTextConverter=True}"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Order Total">
                 <TextBlock Width="100" Text="{Binding Total, NotifyOnValidationError=True}"/>

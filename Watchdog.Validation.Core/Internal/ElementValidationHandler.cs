@@ -1,4 +1,4 @@
-﻿namespace Jd.Wpf.Validation.Internal
+﻿namespace Watchdog.Validation.Core.Internal
 {
     using System;
     using System.Globalization;
@@ -113,13 +113,13 @@
             if (t != null)
             {
                 var prop = ValidationProperties.GetBoundProperty(t);
-                  t.SetValue(prop, e.InvalidData);
-                    BindingOperations.GetBindingExpression(t, prop).UpdateSource();
+                t.SetValue(prop, e.InvalidData);
+                BindingOperations.GetBindingExpression(t, prop).UpdateSource();
                 //t.Dispatcher.BeginInvoke(new Action(() =>
                 //{
                 //    t.SetValue(prop, e.InvalidData);
                 //    BindingOperations.GetBindingExpression(t, prop).UpdateSource();
-                   
+
                 //}));
             }
         }
@@ -169,17 +169,17 @@
         #region Nested type: ArtificalValidationRule
 
         /// <summary>
-        /// A WPF ValidationRule which does nothing.  Only exists so we have something to use with Validation.MarkInvalid().
+        ///     A WPF ValidationRule which does nothing.  Only exists so we have something to use with Validation.MarkInvalid().
         /// </summary>
         private sealed class ArtificalValidationRule : ValidationRule
         {
             /// <summary>
-            /// When overridden in a derived class, performs validation checks on a value.
+            ///     When overridden in a derived class, performs validation checks on a value.
             /// </summary>
-            /// <param name="value">The value from the binding target to check.</param>
-            /// <param name="cultureInfo">The culture to use in this rule.</param>
+            /// <param name = "value">The value from the binding target to check.</param>
+            /// <param name = "cultureInfo">The culture to use in this rule.</param>
             /// <returns>
-            /// A <see cref="T:System.Windows.Controls.ValidationResult"/> object.
+            ///     A <see cref = "T:System.Windows.Controls.ValidationResult" /> object.
             /// </returns>
             public override ValidationResult Validate(object value, CultureInfo cultureInfo)
             {
@@ -198,9 +198,10 @@
         {
             this.b = b;
         }
+
         public Binding GetSource()
         {
-            return b;
+            return this.b;
         }
     }
 
@@ -216,62 +217,62 @@
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var stringValue = value as string;
-            
+
             if (stringValue != null)
             {
-                if (targetType == typeof(Int32))
+                if (targetType == typeof (Int32))
                 {
                     int i;
                     if (Int32.TryParse(stringValue, out i))
                     {
                         return i;
                     }
-                }    
+                }
 
-                if (targetType == typeof(Int64))
+                if (targetType == typeof (Int64))
                 {
                     long l;
                     if (Int64.TryParse(stringValue, out l))
                     {
                         return l;
                     }
-                }    
-  
-                if (targetType == typeof(bool))
+                }
+
+                if (targetType == typeof (bool))
                 {
                     bool b;
                     if (Boolean.TryParse(stringValue, out b))
                     {
                         return b;
                     }
-                }      
+                }
 
-                if (targetType == typeof(decimal))
+                if (targetType == typeof (decimal))
                 {
                     decimal d;
                     if (Decimal.TryParse(stringValue, out d))
                     {
                         return d;
                     }
-                }      
+                }
 
-                if (targetType == typeof(double))
+                if (targetType == typeof (double))
                 {
                     double db;
                     if (Double.TryParse(stringValue, out db))
                     {
                         return db;
                     }
-                }    
+                }
 
-                if (targetType == typeof(DateTime))
+                if (targetType == typeof (DateTime))
                 {
                     DateTime dt;
                     if (DateTime.TryParse(stringValue, out dt))
                     {
                         return dt;
                     }
-                }    
+                }
             }
 
             return DependencyProperty.UnsetValue;

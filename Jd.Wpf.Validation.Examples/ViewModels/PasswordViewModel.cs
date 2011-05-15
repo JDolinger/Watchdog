@@ -2,7 +2,8 @@
 {
     using System.Collections.ObjectModel;
     using System.ComponentModel;
-    using Jd.Wpf.Validation.ClientUtil;
+    using Watchdog.Validation.Core;
+    using Watchdog.Validation.Core.ClientUtil;
 
     public class PasswordViewModel : INotifyPropertyChanged
     {

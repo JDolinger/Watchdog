@@ -5,9 +5,10 @@
     using System.Globalization;
     using System.Windows.Data;
     using System.Windows.Input;
-    using Jd.Wpf.Validation.ClientUtil;
     using Jd.Wpf.Validation.Examples.Util;
     using Jd.Wpf.Validation.Examples.ViewModels;
+    using Watchdog.Validation.Core;
+    using Watchdog.Validation.Core.ClientUtil;
 
     public class OrderTicketViewModel : INotifyPropertyChanged
     {

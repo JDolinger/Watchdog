@@ -1,14 +1,14 @@
-﻿namespace Jd.Wpf.Validation
+﻿namespace Watchdog.Validation.Core
 {
     using System;
     using System.Windows;
-    using Jd.Wpf.Validation.Internal;
+    using Watchdog.Validation.Core.Internal;
 
     /// <summary>
     ///     Represents a Validation Exception thrown by WPF when it is
     ///     unable to transfer a value from a View element (<see cref = "FrameworkElement" />
     ///     in WPF Logical Tree) to its Binding source.  It is caught by the <see cref = "ValidationScope" />
-    ///     and turned added into the scope, <see cref = "ValidationScope.errorSource" /> collection so the
+    ///     and turned added into the scope, <see cref = "ValidationScope.ErrorSource" /> collection so the
     ///     ViewModel layer of the application is aware of it.
     /// 
     ///     This error is similar to a <see cref = "ValidationError" /> regarding its members, except
@@ -48,12 +48,13 @@
 
 #pragma warning disable 659
         /// <summary>
-        /// Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>.
+        ///     Determines whether the specified <see cref = "T:System.Object" /> is equal to the current <see cref = "T:System.Object" />.
         /// </summary>
         /// <returns>
-        /// true if the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>; otherwise, false.
+        ///     true if the specified <see cref = "T:System.Object" /> is equal to the current <see cref = "T:System.Object" />; otherwise, false.
         /// </returns>
-        /// <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:System.Object"/>. </param><filterpriority>2</filterpriority>
+        /// <param name = "obj">The <see cref = "T:System.Object" /> to compare with the current <see cref = "T:System.Object" />. </param>
+        /// <filterpriority>2</filterpriority>
         public override bool Equals(object obj)
 #pragma warning restore 659
         {

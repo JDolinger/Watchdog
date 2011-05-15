@@ -1,7 +1,7 @@
-﻿namespace Jd.Wpf.Validation
+﻿namespace Watchdog.Validation.Core
 {
     using System.Windows.Data;
-    using Jd.Wpf.Validation.Internal;
+    using Watchdog.Validation.Core.Internal;
 
     public class WatchdogBinding : Binding
     {

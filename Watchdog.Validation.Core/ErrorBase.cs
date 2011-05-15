@@ -1,4 +1,4 @@
-﻿namespace Jd.Wpf.Validation
+﻿namespace Watchdog.Validation.Core
 {
     using System;
 
