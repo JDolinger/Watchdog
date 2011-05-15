@@ -71,8 +71,7 @@
             {
                 if (this.password1 != this.password2)
                 {
-                    this.validationErrors.Add("Password1", "Passwords must match");
-                    this.validationErrors.Add("Password2", "Passwords must match");
+                    this.validationErrors.Add("Passwords must match", "Password1", "Password2");
                 }
                 else
                 {

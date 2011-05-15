@@ -114,8 +114,7 @@
 
             if (this.total > this.tradingParams.TradingLimit)
             {
-                this.validationErrors.Add("Price", "Over trading limit");
-                this.validationErrors.Add("Quantity", "Over trading limit");
+                this.validationErrors.Add("Over trading limit", "Price", "Quantity");
             }
             else
             {
@@ -134,9 +133,7 @@
             {
                 if (this.quantity > this.tradingParams.GetPosition(this.symbol))
                 {
-                    this.validationErrors.Add("Side", "Can not short more than current position.");
-                    this.validationErrors.Add("Quantity", "Can not short more than current position.");
-                    this.validationErrors.Add("Symbol", "Can not short more than current position.");
+                    this.validationErrors.Add("Can not short more than current position.", "Side", "Quantity", "Symbol");
                 }
             }
         }
@@ -146,7 +143,7 @@
             this.validationErrors.ClearValidationError("Symbol");
             if (this.tradingParams.RestrictedSymbols.Contains(this.symbol))
             {
-                this.validationErrors.Add("Symbol", string.Format("{0} is restricted", this.symbol));
+                this.validationErrors.Add(string.Format("{0} is restricted", this.symbol), "Symbol");
             }
         }
 

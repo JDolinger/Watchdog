@@ -18,13 +18,11 @@
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:SuspendableBindingConverter.cs" caret="1179" fromTop="31" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Util/f:DelegateCommand.cs" caret="28" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:PasswordViewModel.cs" caret="27" fromTop="0" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="27" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml.cs" caret="33" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:Launcher.xaml.cs" caret="366" fromTop="13" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml" caret="45" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml.cs" caret="0" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml.cs" caret="430" fromTop="14" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="251" fromTop="7" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:MasterDetailViewModel.cs" caret="152" fromTop="4" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:MasterDetail.xaml.cs" caret="411" fromTop="13" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml.cs" caret="256" fromTop="8" />
@@ -34,27 +32,20 @@
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:Launcher.xaml" caret="34" fromTop="0" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Properties/f:AssemblyInfo.cs" caret="557" fromTop="13" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="30" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml.cs" caret="162" fromTop="7" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="391" fromTop="5" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="2279" fromTop="43" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2692" fromTop="23" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="4345" fromTop="33" />
     </RecentFiles>
     <RecentEdits>
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="4250" fromTop="103" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1661" fromTop="56" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Util/f:DelegateCommand.cs" caret="32" fromTop="0" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:MasterDetailViewModel.cs" caret="27" fromTop="0" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="38" fromTop="0" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:PasswordViewModel.cs" caret="27" fromTop="0" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="27" fromTop="0" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml.cs" caret="33" fromTop="0" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:Launcher.xaml.cs" caret="366" fromTop="13" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:Launcher.xaml" caret="34" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="45" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml" caret="45" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml.cs" caret="0" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml.cs" caret="445" fromTop="16" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml.cs" caret="111" fromTop="3" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="251" fromTop="7" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="4895" fromTop="7" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:MasterDetailViewModel.cs" caret="152" fromTop="4" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:MasterDetail.xaml.cs" caret="113" fromTop="3" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml.cs" caret="113" fromTop="3" />
@@ -69,6 +60,15 @@
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="30" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml.cs" caret="162" fromTop="7" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="391" fromTop="5" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="2279" fromTop="32" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="4895" fromTop="137" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="2057" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="1756" fromTop="16" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="1661" fromTop="15" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="1422" fromTop="6" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="3921" fromTop="25" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2692" fromTop="23" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="4345" fromTop="33" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -90,26 +90,26 @@
       <Item value="class" priority="19" />
       <Item value="private" priority="83" />
       <Item value="readonly" priority="14" />
-      <Item value="string" priority="59" />
+      <Item value="string" priority="60" />
       <Item value="ctor" priority="19" />
-      <Item value="this" priority="232" />
+      <Item value="this" priority="237" />
       <Item value="targetBinding" priority="3" />
       <Item value="message" priority="3" />
       <Item value="interface" priority="1" />
-      <Item value="void" priority="64" />
+      <Item value="void" priority="65" />
       <Item value="Error`0" priority="10" />
       <Item value="IEnumerable" priority="6" />
       <Item value="BadImageFormatException`0" priority="0" />
       <Item value="IField`0" priority="7" />
       <Item value="IDisposable`0" priority="4" />
       <Item value="bool" priority="17" />
-      <Item value="return" priority="58" />
+      <Item value="return" priority="59" />
       <Item value="false" priority="15" />
       <Item value="locked" priority="0" />
       <Item value="true" priority="17" />
       <Item value="ICollection" priority="16" />
       <Item value="new" priority="73" />
-      <Item value="if" priority="109" />
+      <Item value="if" priority="113" />
       <Item value="var" priority="54" />
       <Item value="as" priority="27" />
       <Item value="incc" priority="1" />
@@ -139,7 +139,7 @@
       <Item value="WeakReference`0" priority="5" />
       <Item value="managed" priority="0" />
       <Item value="WeakReference" priority="2" />
-      <Item value="null" priority="7" />
+      <Item value="null" priority="8" />
       <Item value="PropertyPath`0" priority="3" />
       <Item value="ValidationScope`0" priority="4" />
       <Item value="static" priority="16" />
@@ -373,7 +373,7 @@
       <Item value="KeyValuePair" priority="0" />
       <Item value="parts" priority="3" />
       <Item value="positionsStore" priority="0" />
-      <Item value="symbol" priority="0" />
+      <Item value="symbol" priority="1" />
       <Item value="pos" priority="0" />
       <Item value="IParameters`0" priority="0" />
       <Item value="tradingParams" priority="0" />
@@ -468,7 +468,7 @@
       <Item value="IsCheckedProperty" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
-      <Item value="IsNullOrEmpty`0" priority="5" />
+      <Item value="IsNullOrEmpty`0" priority="6" />
       <Item value="Empty" priority="5" />
       <Item value="Join`0" priority="0" />
       <Item value="Format`0" priority="1" />
@@ -824,6 +824,16 @@
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.Examples.ViewModels.IParameters">
       <Item value="TradingLimit" priority="0" />
       <Item value="RestrictedSymbols" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Watchdog.Examples.ViewModels.OrderTicketViewModel">
+      <Item value="Side" priority="0" />
+      <Item value="quantity" priority="0" />
+      <Item value="tradingParams" priority="0" />
+      <Item value="symbol" priority="0" />
+      <Item value="ValidatePosition`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Watchdog.Examples.ViewModels.IParameters">
+      <Item value="GetHashCode`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

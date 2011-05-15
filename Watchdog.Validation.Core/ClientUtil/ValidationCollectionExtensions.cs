@@ -14,14 +14,18 @@
         ///     Creates a <see cref = "ValidationError" /> and adds it to the collection.
         /// </summary>
         /// <param name = "collection">The target collection to add to.</param>
-        /// <param name = "targetFieldKey">The field being flagged as invalid.</param>
+        /// <param name = "targetFieldKeys">The list of fields to flag with the message.</param>
         /// <param name = "message">The associated message.</param>
-        public static void Add(this ICollection<IError> collection, string targetFieldKey, string message)
+        public static void Add(this ICollection<IError> collection, string message, params string[] targetFieldKeys)
         {
-            var err = new ValidationError(targetFieldKey, message);
-            if (!collection.Contains(err))
+            foreach (var fieldKey in targetFieldKeys)
             {
-                collection.Add(new ValidationError(targetFieldKey, message));
+                var err = new ValidationError(fieldKey, message);
+
+                if (!collection.Contains(err))
+                {
+                    collection.Add(new ValidationError(fieldKey, message));
+                }
             }
         }
 
