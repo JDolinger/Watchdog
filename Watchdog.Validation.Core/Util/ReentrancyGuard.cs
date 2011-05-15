@@ -39,8 +39,8 @@
         ///     Whether the guard is currently in effect.
         /// </summary>
         //private bool isSet;
-
         private int count;
+
         /// <summary>
         ///     Gets a value the value of the <see cref = "isSet" /> field.
         /// </summary>
@@ -92,8 +92,7 @@
             /// </summary>
             public void Dispose()
             {
-                               this.guard.count--;
-
+                this.guard.count--;
             }
         }
 

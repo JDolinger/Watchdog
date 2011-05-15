@@ -127,14 +127,11 @@
 
         private void ValidateSymbol()
         {
+            this.validationErrors.ClearValidationError("Symbol");    
             if (this.tradingParams.RestrictedSymbols.Contains(this.symbol))
             {
                 this.validationErrors.Add("Symbol", string.Format("{0} is restricted", this.symbol));
             } 
-            else
-            {
-                this.validationErrors.ClearValidationError("Symbol");    
-            }
         }
 
         private bool CanBook()

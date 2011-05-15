@@ -30,7 +30,7 @@
             set
             {
                 this.useGenericTextConverter = value;
-                
+
                 if (this.useGenericTextConverter)
                 {
                     this.Converter = SharedConverterInstance;

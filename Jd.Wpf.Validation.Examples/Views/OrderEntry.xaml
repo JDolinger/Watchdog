@@ -31,7 +31,7 @@
                 <ComboBox Width="100" SelectedValue="{Binding Side}" ItemsSource="{StaticResource TradeTypeList}" />
             </HeaderedContentControl>
             <HeaderedContentControl Header="Symbol">
-                <TextBox Width="100" Text="{Binding Symbol, NotifyOnValidationError=True}"/>
+                <TextBox Width="100" Text="{Binding Symbol, NotifyOnValidationError=True}" CharacterCasing="Upper"/>
             </HeaderedContentControl>
             <HeaderedContentControl Header="Quantity">
                 <TextBox Width="100" Text="{Core:WatchdogBinding Quantity, UseGenericTextConverter=True}"/>
