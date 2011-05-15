@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace Jd.Wpf.Validation.Examples
+namespace Watchdog.Examples
 {
     /// <summary>
     /// Interaction logic for App.xaml
