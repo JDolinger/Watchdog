@@ -2,8 +2,6 @@
 {
     using System.Collections.ObjectModel;
     using System.ComponentModel;
-    using System.Globalization;
-    using System.Windows.Data;
     using System.Windows.Input;
     using Watchdog.Examples.Util;
     using Watchdog.Validation.Core;
@@ -13,13 +11,12 @@
     {
         private readonly ObservableCollection<IError> validationErrors;
         private readonly ICommand bookTicketCommand;
+        private readonly IParameters tradingParams;
         private string side;
         private int quantity;
         private string symbol;
         private decimal price;
         private decimal total;
-
-        private IParameters tradingParams;
 
         public OrderTicketViewModel(IParameters tradingParams)
         {
@@ -43,6 +40,7 @@
             {
                 this.side = value;
                 this.RaisePropertyChanged("Side");
+                this.ValidatePosition();
             }
         }
 
@@ -52,8 +50,9 @@
             set
             {
                 this.quantity = value;
-                this.CalculateTotal();
                 this.RaisePropertyChanged("Quantity");
+                this.CalculateTotal();
+                this.ValidatePosition();
             }
         }
 
@@ -65,6 +64,7 @@
                 this.symbol = value;
                 this.RaisePropertyChanged("Symbol");
                 this.ValidateSymbol();
+                this.ValidatePosition();
             }
         }
 
@@ -111,12 +111,12 @@
         private void CalculateTotal()
         {
             this.Total = this.Price * this.Quantity;
-            
-            if (total > this.tradingParams.TradingLimit)
+
+            if (this.total > this.tradingParams.TradingLimit)
             {
-                this.validationErrors.Add("Price", "Over trading limit");    
-                this.validationErrors.Add("Quantity", "Over trading limit");    
-            } 
+                this.validationErrors.Add("Price", "Over trading limit");
+                this.validationErrors.Add("Quantity", "Over trading limit");
+            }
             else
             {
                 this.validationErrors.ClearValidationError("Price");
@@ -124,13 +124,30 @@
             }
         }
 
+        private void ValidatePosition()
+        {
+            this.validationErrors.ClearValidationError("Side");
+            this.validationErrors.ClearValidationError("Quantity");
+            this.validationErrors.ClearValidationError("Symbol");
+
+            if (this.Side == "Short")
+            {
+                if (this.quantity > this.tradingParams.GetPosition(this.symbol))
+                {
+                    this.validationErrors.Add("Side", "Can not short more than current position.");
+                    this.validationErrors.Add("Quantity", "Can not short more than current position.");
+                    this.validationErrors.Add("Symbol", "Can not short more than current position.");
+                }
+            }
+        }
+
         private void ValidateSymbol()
         {
-            this.validationErrors.ClearValidationError("Symbol");    
+            this.validationErrors.ClearValidationError("Symbol");
             if (this.tradingParams.RestrictedSymbols.Contains(this.symbol))
             {
                 this.validationErrors.Add("Symbol", string.Format("{0} is restricted", this.symbol));
-            } 
+            }
         }
 
         private bool CanBook()
@@ -138,22 +155,4 @@
             return this.ValidationErrors.Count == 0;
         }
     }
-
-    public class Tet : IValueConverter
-    {
-        #region IValueConverter Members
-
-        public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public object ConvertBack(object value, System.Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        #endregion
-    }
-
 }

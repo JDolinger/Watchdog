@@ -43,7 +43,8 @@
             </Setter>
         </Style>
         
-        <Style TargetType="{x:Type TextBox}"  BasedOn="{StaticResource EntryBase}" />            
-        
+        <Style TargetType="{x:Type TextBox}"  BasedOn="{StaticResource EntryBase}" />
+        <Style TargetType="{x:Type ComboBox}"  BasedOn="{StaticResource EntryBase}" />
+
     </Application.Resources>
 </Application>

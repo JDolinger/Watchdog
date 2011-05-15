@@ -92,6 +92,11 @@
 
         public int GetPosition(string symbol)
         {
+            if (string.IsNullOrEmpty(symbol))
+            {
+                return 0;
+            }
+
             int pos;
             if (this.positionsStore.TryGetValue(symbol, out pos))
             {
