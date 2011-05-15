@@ -28,7 +28,7 @@
 
         private void CreateNewOrder()
         {
-            this.AllOrders.Add(new OrderTicketViewModel());
+            this.AllOrders.Add(new OrderTicketViewModel(Parameters.SharedInstance));
         }
     }
 }

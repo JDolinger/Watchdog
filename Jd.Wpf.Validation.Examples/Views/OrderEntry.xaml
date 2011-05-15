@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
         xmlns:Validation="clr-namespace:Jd.Wpf.Validation;assembly=Jd.Wpf.Validation" 
         xmlns:Views="clr-namespace:Jd.Wpf.Validation.Examples.Views" 
-        xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:Internal="clr-namespace:Jd.Wpf.Validation.Internal;assembly=Jd.Wpf.Validation">
+        xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+        xmlns:Internal="clr-namespace:Jd.Wpf.Validation.Internal;assembly=Jd.Wpf.Validation">
 
     <UserControl.Resources>
         <x:Array x:Key="TradeTypeList" Type="{x:Type sys:String}">
@@ -11,8 +12,6 @@
             <sys:String>Sell</sys:String>
             <sys:String>Short</sys:String>
         </x:Array>
-        
-        <Internal:SafeTypeToStringConverter x:Key="String2Int"/>
     </UserControl.Resources>
     <Grid Validation:ValidationProperties.ErrorSource="{Binding ValidationErrors}">
         <Grid.RowDefinitions>
@@ -44,7 +43,9 @@
             <HeaderedContentControl Header="Order Total">
                 <TextBlock Width="100" Text="{Binding Total, NotifyOnValidationError=True}"/>
             </HeaderedContentControl>
-            <TextBlock Text="{Binding ValidationErrors.Count}"/>
+            <HeaderedContentControl Header="# Errors">
+                <TextBlock Width="100" Text="{Binding ValidationErrors.Count}"/>
+            </HeaderedContentControl>
         </WrapPanel>
         
         <Button Content="Book It" 

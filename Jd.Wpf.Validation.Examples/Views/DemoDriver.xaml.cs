@@ -11,7 +11,7 @@
         public DemoDriver()
         {
             this.InitializeComponent();
-            this.DataContext = new OrderTicketViewModel();
+            // this.DataContext = new OrderTicketViewModel();
         }
 
         ~DemoDriver()

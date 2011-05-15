@@ -7,6 +7,7 @@
     using System.Windows.Input;
     using Jd.Wpf.Validation.ClientUtil;
     using Jd.Wpf.Validation.Examples.Util;
+    using Jd.Wpf.Validation.Examples.ViewModels;
 
     public class OrderTicketViewModel : INotifyPropertyChanged
     {
@@ -18,10 +19,11 @@
         private decimal price;
         private decimal total;
 
-        private int currentPosition;
+        private IParameters tradingParams;
 
-        public OrderTicketViewModel()
+        public OrderTicketViewModel(IParameters tradingParams)
         {
+            this.tradingParams = tradingParams;
             this.bookTicketCommand = new DelegateCommand<object>(
                 x => this.CanBook(),
                 x =>
@@ -62,6 +64,7 @@
             {
                 this.symbol = value;
                 this.RaisePropertyChanged("Symbol");
+                this.ValidateSymbol();
             }
         }
 
@@ -73,7 +76,6 @@
                 this.price = value;
                 this.RaisePropertyChanged("Price");
                 this.CalculateTotal();
-                this.ValidatePrice();
             }
         }
 
@@ -84,16 +86,6 @@
             {
                 this.total = value;
                 this.RaisePropertyChanged("Total");
-            }
-        }
-
-        public int CurrentPosition
-        {
-            get { return this.currentPosition; }
-            set
-            {
-                this.currentPosition = value;
-                this.RaisePropertyChanged("CurrentPosition");
             }
         }
 
@@ -116,21 +108,32 @@
             }
         }
 
-        private void ValidatePrice()
-        {
-            if (this.Price > 100)
-            {
-                this.validationErrors.Add("Price", "Price should be less than 100");
-            }
-            else
-            {
-                this.validationErrors.ClearValidationError("Price");
-            }
-        }
-
         private void CalculateTotal()
         {
             this.Total = this.Price * this.Quantity;
+            
+            if (total > this.tradingParams.TradingLimit)
+            {
+                this.validationErrors.Add("Price", "Over trading limit");    
+                this.validationErrors.Add("Quantity", "Over trading limit");    
+            } 
+            else
+            {
+                this.validationErrors.ClearValidationError("Price");
+                this.validationErrors.ClearValidationError("Quantity");
+            }
+        }
+
+        private void ValidateSymbol()
+        {
+            if (this.tradingParams.RestrictedSymbols.Contains(this.symbol))
+            {
+                this.validationErrors.Add("Symbol", string.Format("{0} is restricted", this.symbol));
+            } 
+            else
+            {
+                this.validationErrors.ClearValidationError("Symbol");    
+            }
         }
 
         private bool CanBook()

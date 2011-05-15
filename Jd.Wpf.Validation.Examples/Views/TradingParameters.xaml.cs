@@ -1,27 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace Jd.Wpf.Validation.Examples.Views
+﻿namespace Jd.Wpf.Validation.Examples.Views
 {
+    using System.Windows.Controls;
+    using Jd.Wpf.Validation.Examples.ViewModels;
+
     /// <summary>
-    /// Interaction logic for TradingParameters.xaml
+    ///     Interaction logic for TradingParameters.xaml
     /// </summary>
     public partial class TradingParameters : UserControl
     {
         public TradingParameters()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+            this.DataContext = Parameters.SharedInstance;
         }
     }
 }

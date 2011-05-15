@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jd.Wpf.Validation", "Jd.Wpf.Validation\Jd.Wpf.Validation.csproj", "{4AADA44E-4608-46E7-8BA2-D804F244458B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchDog.Validation.Core", "Jd.Wpf.Validation\WatchDog.Validation.Core.csproj", "{4AADA44E-4608-46E7-8BA2-D804F244458B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jd.Wpf.Validation.Examples", "Jd.Wpf.Validation.Examples\Jd.Wpf.Validation.Examples.csproj", "{E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5}"
 EndProject

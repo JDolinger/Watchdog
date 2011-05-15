@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\MasterDetailViewModel.cs" />
+    <Compile Include="ViewModels\ParametersViewModel.cs" />
     <Compile Include="ViewModels\PasswordViewModel.cs" />
     <Compile Include="Views\Launcher.xaml.cs">
       <DependentUpon>Launcher.xaml</DependentUpon>
@@ -132,9 +133,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Jd.Wpf.Validation\Jd.Wpf.Validation.csproj">
+    <ProjectReference Include="..\Jd.Wpf.Validation\WatchDog.Validation.Core.csproj">
       <Project>{4AADA44E-4608-46E7-8BA2-D804F244458B}</Project>
-      <Name>Jd.Wpf.Validation</Name>
+      <Name>WatchDog.Validation.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
