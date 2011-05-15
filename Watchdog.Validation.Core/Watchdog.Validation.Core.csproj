@@ -8,8 +8,8 @@
     <ProjectGuid>{4AADA44E-4608-46E7-8BA2-D804F244458B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jd.Wpf.Validation</RootNamespace>
-    <AssemblyName>Jd.Wpf.Validation</AssemblyName>
+    <RootNamespace>Watchdog.Validation.Core</RootNamespace>
+    <AssemblyName>Watchdog.Validation.Core</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

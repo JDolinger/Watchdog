@@ -8,68 +8,51 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:Launcher.xaml" caret="572" fromTop="12" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="133" fromTop="1" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml" caret="836" fromTop="19" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:PasswordViewModel.cs" caret="1416" fromTop="49" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:Launcher.xaml.cs" caret="523" fromTop="20" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Util/f:DelegateCommand.cs" caret="974" fromTop="27" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:ReentrancyGuard.cs" caret="2577" fromTop="12" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:RunAfterDispatchCommand.cs" caret="0" fromTop="0" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:CollectionWatcherOfT.cs" caret="2969" fromTop="15" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml.cs" caret="248" fromTop="9" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml" caret="551" fromTop="6" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:MasterDetail.xaml" caret="616" fromTop="10" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="4265" fromTop="29" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:MasterDetailViewModel.cs" caret="624" fromTop="15" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:Field.cs" caret="1765" fromTop="5" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="3784" fromTop="24" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IError.cs" caret="457" fromTop="12" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="1246" fromTop="36" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="751" fromTop="16" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ConversionError.cs" caret="2444" fromTop="19" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:IField.cs" caret="1179" fromTop="22" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FrameworkElementExtensions.cs" caret="0" fromTop="0" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldMap.cs" caret="984" fromTop="35" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="778" fromTop="25" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:SuspendableBindingConverter.cs" caret="91" fromTop="3" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="9207" fromTop="15" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="794" fromTop="23" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="1649" fromTop="8" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="6269" fromTop="94" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:ClientUtil/f:ValidationCollectionExtensions.cs" caret="409" fromTop="0" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml.cs" caret="328" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml" caret="538" fromTop="12" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml.cs" caret="303" fromTop="10" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:MasterDetail.xaml.cs" caret="419" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml.cs" caret="421" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="1160" fromTop="2" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml.cs" caret="426" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml" caret="1695" fromTop="20" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:MasterDetailViewModel.cs" caret="1022" fromTop="30" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:PasswordViewModel.cs" caret="1416" fromTop="49" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="1839" fromTop="22" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="2275" fromTop="14" />
     </RecentFiles>
     <RecentEdits>
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="8769" fromTop="15" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="8769" fromTop="27" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="8769" fromTop="28" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="8769" fromTop="9" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="9128" fromTop="9" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:SuspendableBindingConverter.cs" caret="766" fromTop="21" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:SuspendableBindingConverter.cs" caret="1077" fromTop="28" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1663" fromTop="15" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1663" fromTop="32" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1663" fromTop="36" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1663" fromTop="10" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1663" fromTop="29" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1663" fromTop="22" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1663" fromTop="48" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="986" fromTop="28" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="814" fromTop="14" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1372" fromTop="38" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1155" fromTop="37" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="778" fromTop="9" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="778" fromTop="23" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="778" fromTop="19" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="364" fromTop="12" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="770" fromTop="27" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="225" fromTop="9" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="688" fromTop="20" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="675" fromTop="21" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="327" fromTop="10" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="6139" fromTop="19" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="6269" fromTop="23" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="2210" fromTop="17" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="436" fromTop="6" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml" caret="308" fromTop="3" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="3" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="9" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="19" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="19" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="12" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="30" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="22" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="878" fromTop="27" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:DemoDriver.xaml.cs" caret="328" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="26" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2807" fromTop="14" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml.cs" caret="321" fromTop="11" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:MasterDetailViewModel.cs" caret="1022" fromTop="30" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml" caret="456" fromTop="6" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml.cs" caret="463" fromTop="14" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml.cs" caret="442" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:TradingParameters.xaml" caret="1695" fromTop="20" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="2534" fromTop="20" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="710" fromTop="21" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="357" fromTop="13" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2799" fromTop="17" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2804" fromTop="16" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="261" fromTop="9" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="1839" fromTop="22" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="2000" fromTop="19" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="3986" fromTop="30" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="3060" fromTop="3" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="2275" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -85,32 +68,32 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="59" />
+      <Item value="public" priority="64" />
       <Item value="Wpf" priority="0" />
       <Item value="Validation" priority="7" />
       <Item value="class" priority="19" />
-      <Item value="private" priority="75" />
+      <Item value="private" priority="83" />
       <Item value="readonly" priority="14" />
-      <Item value="string" priority="50" />
-      <Item value="ctor" priority="18" />
-      <Item value="this" priority="204" />
+      <Item value="string" priority="59" />
+      <Item value="ctor" priority="19" />
+      <Item value="this" priority="232" />
       <Item value="targetBinding" priority="3" />
       <Item value="message" priority="3" />
       <Item value="interface" priority="1" />
-      <Item value="void" priority="60" />
+      <Item value="void" priority="64" />
       <Item value="Error`0" priority="10" />
       <Item value="IEnumerable" priority="6" />
       <Item value="BadImageFormatException`0" priority="0" />
       <Item value="IField`0" priority="7" />
       <Item value="IDisposable`0" priority="4" />
       <Item value="bool" priority="17" />
-      <Item value="return" priority="54" />
+      <Item value="return" priority="58" />
       <Item value="false" priority="15" />
       <Item value="locked" priority="0" />
       <Item value="true" priority="17" />
       <Item value="ICollection" priority="16" />
-      <Item value="new" priority="67" />
-      <Item value="if" priority="105" />
+      <Item value="new" priority="73" />
+      <Item value="if" priority="109" />
       <Item value="var" priority="54" />
       <Item value="as" priority="27" />
       <Item value="incc" priority="1" />
@@ -143,7 +126,7 @@
       <Item value="null" priority="7" />
       <Item value="PropertyPath`0" priority="3" />
       <Item value="ValidationScope`0" priority="4" />
-      <Item value="static" priority="13" />
+      <Item value="static" priority="16" />
       <Item value="DependencyObject`0" priority="4" />
       <Item value="DependencyPropertyChangedEventArgs`0" priority="1" />
       <Item value="obj" priority="7" />
@@ -173,10 +156,10 @@
       <Item value="b" priority="11" />
       <Item value="Control`0" priority="4" />
       <Item value="explicitKey" priority="0" />
-      <Item value="List" priority="2" />
-      <Item value="IDictionary" priority="1" />
+      <Item value="List" priority="3" />
+      <Item value="IDictionary" priority="2" />
       <Item value="Dictionary&lt;string,IField&gt;" priority="0" />
-      <Item value="out" priority="8" />
+      <Item value="out" priority="9" />
       <Item value="fieldname" priority="0" />
       <Item value="TryResolveValidationKey`0" priority="0" />
       <Item value="fieldName" priority="2" />
@@ -202,7 +185,7 @@
       <Item value="f" priority="7" />
       <Item value="ReentrancyGuard`0" priority="5" />
       <Item value="ReentrancyGuard" priority="0" />
-      <Item value="using" priority="10" />
+      <Item value="using" priority="11" />
       <Item value="addingGuard" priority="2" />
       <Item value="ref" priority="0" />
       <Item value="guard" priority="3" />
@@ -222,13 +205,13 @@
       <Item value="bindingTargetElement" priority="3" />
       <Item value="bindingProperty" priority="4" />
       <Item value="IError`0" priority="7" />
-      <Item value="System" priority="6" />
-      <Item value="Linq" priority="3" />
-      <Item value="else" priority="3" />
+      <Item value="System" priority="7" />
+      <Item value="Linq" priority="4" />
+      <Item value="else" priority="5" />
       <Item value="ValidationErrorEventAction`0" priority="0" />
       <Item value="double" priority="0" />
-      <Item value="int" priority="5" />
-      <Item value="decimal" priority="4" />
+      <Item value="int" priority="10" />
+      <Item value="decimal" priority="6" />
       <Item value="protected" priority="2" />
       <Item value="h" priority="0" />
       <Item value="PropertyChangedEventArgs" priority="0" />
@@ -260,7 +243,7 @@
       <Item value="other" priority="2" />
       <Item value="where" priority="2" />
       <Item value="ListBox`0" priority="0" />
-      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="List&lt;string&gt;" priority="1" />
       <Item value="handled" priority="4" />
       <Item value="errorCreationBinding" priority="1" />
       <Item value="NotifyOnValidationError" priority="0" />
@@ -279,7 +262,7 @@
       <Item value="sealed" priority="1" />
       <Item value="AlwaysInvalidRule`0" priority="0" />
       <Item value="AlwaysInvalidRule" priority="0" />
-      <Item value="value" priority="10" />
+      <Item value="value" priority="11" />
       <Item value="eh" priority="0" />
       <Item value="s" priority="0" />
       <Item value="newError" priority="0" />
@@ -290,7 +273,7 @@
       <Item value="targetFieldKey" priority="0" />
       <Item value="BindingExpressionBase`0" priority="0" />
       <Item value="ArtificalValidationRule" priority="0" />
-      <Item value="is" priority="2" />
+      <Item value="is" priority="3" />
       <Item value="fieldKey" priority="2" />
       <Item value="fieldList" priority="0" />
       <Item value="OrderEntry`0" priority="0" />
@@ -366,6 +349,23 @@
       <Item value="Func" priority="0" />
       <Item value="badData" priority="0" />
       <Item value="wdb" priority="3" />
+      <Item value="ToList`1" priority="2" />
+      <Item value="struct" priority="0" />
+      <Item value="Dictionary&lt;string,int&gt;" priority="0" />
+      <Item value="ToLookup`3" priority="0" />
+      <Item value="pair" priority="1" />
+      <Item value="KeyValuePair" priority="0" />
+      <Item value="parts" priority="3" />
+      <Item value="positionsStore" priority="0" />
+      <Item value="symbol" priority="0" />
+      <Item value="pos" priority="0" />
+      <Item value="IParameters`0" priority="0" />
+      <Item value="tradingParams" priority="0" />
+      <Item value="Parameters`0" priority="2" />
+      <Item value="sharedInstance" priority="0" />
+      <Item value="Parameters" priority="0" />
+      <Item value="TradingParameters`0" priority="2" />
+      <Item value="total" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.Error">
       <Item value="targetBinding" priority="0" />
@@ -404,10 +404,10 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.ObjectModel.ObservableCollection`1">
       <Item value="CollectionChanged" priority="0" />
-      <Item value="Add`0" priority="3" />
+      <Item value="Add`0" priority="5" />
       <Item value="Remove`0" priority="0" />
       <Item value="Where`1" priority="0" />
-      <Item value="Clear`0" priority="1" />
+      <Item value="Clear`0" priority="2" />
       <Item value="ClearValidationError`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Specialized.NotifyCollectionChangedEventArgs">
@@ -454,7 +454,7 @@
       <Item value="IsNullOrEmpty`0" priority="5" />
       <Item value="Empty" priority="5" />
       <Item value="Join`0" priority="0" />
-      <Item value="Format`0" priority="0" />
+      <Item value="Format`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Jd.Wpf.Validation.ValidationProperties">
       <Item value="GetBoundProperty`0" priority="4" />
@@ -479,8 +479,8 @@
       <Item value="FindField`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IDictionary`2">
-      <Item value="TryGetValue`0" priority="3" />
-      <Item value="Add`0" priority="2" />
+      <Item value="TryGetValue`0" priority="4" />
+      <Item value="Add`0" priority="3" />
       <Item value="Values" priority="1" />
       <Item value="GetEnumerator`0" priority="0" />
     </ItemStatistics>
@@ -540,7 +540,7 @@
       <Item value="Where`1" priority="1" />
       <Item value="Cast`1" priority="0" />
       <Item value="OfType`1" priority="2" />
-      <Item value="Contains`0" priority="0" />
+      <Item value="Contains`0" priority="1" />
       <Item value="ToList`1" priority="1" />
       <Item value="GetEnumerator`0" priority="0" />
     </ItemStatistics>
@@ -560,13 +560,17 @@
       <Item value="RaisePropertyChanged`0" priority="1" />
       <Item value="ValidatePrice`0" priority="0" />
       <Item value="Price" priority="1" />
-      <Item value="validationErrors" priority="4" />
+      <Item value="validationErrors" priority="7" />
       <Item value="bookTicketCommand" priority="0" />
       <Item value="CanBook`0" priority="0" />
       <Item value="total" priority="1" />
       <Item value="Total" priority="0" />
       <Item value="Quantity" priority="0" />
       <Item value="CalculateTotal`0" priority="0" />
+      <Item value="tradingParams" priority="2" />
+      <Item value="symbol" priority="2" />
+      <Item value="Symbol" priority="0" />
+      <Item value="ValidateSymbol`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.Examples.MainWindow">
       <Item value="DataContext" priority="0" />
@@ -587,8 +591,9 @@
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="Add`0" priority="0" />
       <Item value="Count" priority="0" />
-      <Item value="Clear`0" priority="0" />
+      <Item value="Clear`0" priority="1" />
       <Item value="ToArray`0" priority="1" />
+      <Item value="ForEach`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.Examples.DelegateCommand`1">
       <Item value="canExecute" priority="1" />
@@ -607,6 +612,7 @@
     <ItemStatistics item="Qualified:System.String">
       <Item value="GetHashCode`0" priority="2" />
       <Item value="GetType`0" priority="0" />
+      <Item value="Split`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Jd.Wpf.Validation.ErrorBase">
       <Item value="targetBinding" priority="1" />
@@ -736,6 +742,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="TryParse`0" priority="1" />
+      <Item value="Parse`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.DependencyProperty">
       <Item value="UnsetValue" priority="0" />
@@ -781,6 +788,25 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Jd.Wpf.Validation.Internal.TypeData">
       <Item value="DefaultValue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Jd.Wpf.Validation.Examples.ViewModels.Parameters">
+      <Item value="restrictedList" priority="1" />
+      <Item value="restrictedSymbols" priority="3" />
+      <Item value="tradingLimit" priority="0" />
+      <Item value="ParseRestrictedList`0" priority="2" />
+      <Item value="ParsePositions`0" priority="1" />
+      <Item value="positions" priority="1" />
+      <Item value="positionsStore" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Jd.Wpf.Validation.Examples.ViewModels.Parameters">
+      <Item value="SharedInstance" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Jd.Wpf.Validation.Examples.Views.TradingParameters">
+      <Item value="DataContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Jd.Wpf.Validation.Examples.ViewModels.IParameters">
+      <Item value="TradingLimit" priority="0" />
+      <Item value="RestrictedSymbols" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

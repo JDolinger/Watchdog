@@ -133,13 +133,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Jd.Wpf.Validation\WatchDog.Validation.Core.csproj">
-      <Project>{4AADA44E-4608-46E7-8BA2-D804F244458B}</Project>
-      <Name>WatchDog.Validation.Core</Name>
-    </ProjectReference>
+    <Resource Include="Resource\button_cancel.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\button_cancel.png" />
+    <ProjectReference Include="..\Watchdog.Validation.Core\Watchdog.Validation.Core.csproj">
+      <Project>{4AADA44E-4608-46E7-8BA2-D804F244458B}</Project>
+      <Name>Watchdog.Validation.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
