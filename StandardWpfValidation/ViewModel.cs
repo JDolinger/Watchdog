@@ -1,4 +1,4 @@
-﻿namespace Watchdog.Examples.ViewModels
+﻿namespace StandardWpfValidation
 {
     using System;
     using System.ComponentModel;
