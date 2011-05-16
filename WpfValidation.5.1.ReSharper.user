@@ -9,7 +9,6 @@
   <RecentFiles>
     <RecentFiles>
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:RunAfterDispatchCommand.cs" caret="333" fromTop="13" />
-      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ConversionError.cs" caret="800" fromTop="15" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="10" fromTop="0" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IError.cs" caret="133" fromTop="5" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="656" fromTop="14" />
@@ -37,6 +36,7 @@
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="30" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml.cs" caret="162" fromTop="7" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="391" fromTop="5" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ConversionError.cs" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="4250" fromTop="103" />
