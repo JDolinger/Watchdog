@@ -8,6 +8,10 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
+<<<<<<< HEAD
+=======
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Util/f:RunAfterDispatchCommand.cs" caret="333" fromTop="13" />
+>>>>>>> ba9345001b31aefb97dfe9da3c8c3bec5037bc48
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="10" fromTop="0" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IError.cs" caret="133" fromTop="5" />
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="656" fromTop="14" />
@@ -30,6 +34,7 @@
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Properties/f:AssemblyInfo.cs" caret="557" fromTop="13" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml.cs" caret="162" fromTop="7" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:PasswordCreation.xaml" caret="391" fromTop="5" />
+<<<<<<< HEAD
       <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:ClientUtil/f:ValidationCollectionExtensions.cs" caret="731" fromTop="16" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:PasswordViewModel.cs" caret="2229" fromTop="30" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2692" fromTop="89" />
@@ -38,6 +43,9 @@
       <File id="F363F572-E5CA-49A5-8A5C-9A46783A5BCD/f:MainWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/f:App.xaml" caret="0" fromTop="0" />
       <File id="F363F572-E5CA-49A5-8A5C-9A46783A5BCD/f:PasswordViewModel.cs" caret="2864" fromTop="30" />
+=======
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ConversionError.cs" caret="0" fromTop="0" />
+>>>>>>> ba9345001b31aefb97dfe9da3c8c3bec5037bc48
     </RecentFiles>
     <RecentEdits>
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Properties/f:AssemblyInfo.cs" caret="389" fromTop="9" />
