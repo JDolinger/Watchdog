@@ -94,7 +94,7 @@
         {
             if (string.IsNullOrEmpty(symbol))
             {
-                return 0;
+                return Int32.MaxValue;
             }
 
             int pos;
@@ -103,7 +103,7 @@
                 return pos;
             }
 
-            return 0;
+            return Int32.MaxValue;
         }
     }
 }
