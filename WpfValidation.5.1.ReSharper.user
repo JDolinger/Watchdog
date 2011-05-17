@@ -9,11 +9,55 @@
   <RecentFiles>
     <RecentFiles>
       <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2908" fromTop="38" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="3671" fromTop="19" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ConversionError.cs" caret="3378" fromTop="44" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:ClientUtil/f:ValidationCollectionExtensions.cs" caret="3426" fromTop="28" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:Field.cs" caret="4644" fromTop="22" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FieldMap.cs" caret="2192" fromTop="44" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:IField.cs" caret="2059" fromTop="31" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationError.cs" caret="2153" fromTop="44" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:IError.cs" caret="1402" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ErrorBase.cs" caret="3693" fromTop="51" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:Views/f:OrderEntry.xaml" caret="1872" fromTop="13" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:FrameworkElementExtensions.cs" caret="0" fromTop="0" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="1583" fromTop="4" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:SuspendableBindingConverter.cs" caret="1508" fromTop="21" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:ValidationProperties.cs" caret="0" fromTop="0" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ValidationScope.cs" caret="6554" fromTop="16" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2832" fromTop="29" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/f:WatchdogBinding.cs" caret="1014" fromTop="22" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="10636" fromTop="131" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2705" fromTop="29" />
-      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:ParametersViewModel.cs" caret="2908" fromTop="38" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="1918" fromTop="11" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="34" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2543" fromTop="25" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="1297" fromTop="12" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="35" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="33" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2405" fromTop="33" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="1604" fromTop="20" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="10341" fromTop="12" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="1004" fromTop="22" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="1382" fromTop="23" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="10302" fromTop="20" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:ElementValidationHandler.cs" caret="12036" fromTop="28" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="24" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2396" fromTop="26" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2373" fromTop="25" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2405" fromTop="27" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2083" fromTop="7" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2979" fromTop="41" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2979" fromTop="38" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2368" fromTop="18" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2984" fromTop="37" />
+      <File id="4AADA44E-4608-46E7-8BA2-D804F244458B/d:Internal/f:TypeData.cs" caret="2832" fromTop="34" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="1470" fromTop="8" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="576" fromTop="15" />
+      <File id="E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5/d:ViewModels/f:OrderTicketViewModel.cs" caret="3239" fromTop="22" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -31,9 +75,82 @@
     <ItemStatistics item="Default">
       <Item value="int" priority="0" />
       <Item value="Int32`0" priority="1" />
+      <Item value="var" priority="2" />
+      <Item value="BindingOperations`0" priority="0" />
+      <Item value="t" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="prop" priority="0" />
+      <Item value="null" priority="3" />
+      <Item value="be" priority="0" />
+      <Item value="public" priority="9" />
+      <Item value="void" priority="1" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="string" priority="7" />
+      <Item value="static" priority="1" />
+      <Item value="return" priority="6" />
+      <Item value="default" priority="4" />
+      <Item value="object" priority="10" />
+      <Item value="Type`0" priority="3" />
+      <Item value="Func" priority="0" />
+      <Item value="Converters" priority="1" />
+      <Item value="new" priority="1" />
+      <Item value="Dictionary&lt;Type,Func&lt;string,object&gt;&gt;" priority="0" />
+      <Item value="typeof" priority="2" />
+      <Item value="bool" priority="2" />
+      <Item value="Boolean`0" priority="1" />
+      <Item value="s" priority="3" />
+      <Item value="OutOfMemoryException`0" priority="3" />
+      <Item value="private" priority="1" />
+      <Item value="delegate" priority="1" />
+      <Item value="out" priority="4" />
+      <Item value="interface" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="IStringParser`0" priority="2" />
+      <Item value="T`0" priority="7" />
+      <Item value="ctor" priority="0" />
+      <Item value="ConvertFunc" priority="1" />
+      <Item value="this" priority="3" />
+      <Item value="parsed" priority="4" />
+      <Item value="StringParser" priority="1" />
+      <Item value="Parsers" priority="0" />
+      <Item value="outParam" priority="0" />
+      <Item value="success" priority="0" />
+      <Item value="TypeData`0" priority="0" />
+      <Item value="targetType" priority="0" />
+      <Item value="stringValue" priority="0" />
+      <Item value="o" priority="0" />
+      <Item value="RegisterParser`1" priority="0" />
+      <Item value="where" priority="1" />
+      <Item value="func" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="MaxValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Data.BindingOperations">
+      <Item value="GetBindingExpression`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IDictionary`2">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Boolean">
+      <Item value="TryParse`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Watchdog.Validation.Core.Internal.TypeData+StringParser`1">
+      <Item value="func" priority="1" />
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Watchdog.Validation.Core.Internal.TypeData">
+      <Item value="GetParser`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Watchdog.Validation.Core.Internal.TypeData+IStringParser">
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="1" />
+      <Item value="HasValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Watchdog.Examples.ViewModels.OrderTicketViewModel">
+      <Item value="quantity" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

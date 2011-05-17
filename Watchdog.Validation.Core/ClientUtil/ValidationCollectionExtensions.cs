@@ -1,17 +1,25 @@
 ﻿//  
-//  ValidationCollectionExtensions.cs
+// ValidationCollectionExtensions.cs
 //
-//  Copyright (C) 2011 Jason Dolinger
+// Copyright (C) 2011 by Jason Dolinger
 //
-//  This program is free software; you can redistribute it and/or modify it under the terms 
-//	of the GNU General Public License as published by the Free Software Foundation; either
-//	version 2 of the License, or (at your option) any later version.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-//	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-//	See the GNU General Public License for more details. You should have received a copy of 
-//	the GNU General Public License along with this program; if not, write to the Free Software 
-//	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 //
 namespace Watchdog.Validation.Core.ClientUtil
 {
@@ -19,18 +27,18 @@ namespace Watchdog.Validation.Core.ClientUtil
     using System.Linq;
 
     /// <summary>
-    ///     Extension method for an <see cref = "ICollection{T}" />.  These can be
-    ///     used by users of Watchdog to assist with managing their collections of
-    ///     Errors on their viewmodel.
+    /// Extension method for an <see cref="ICollection{T}"/>.  These can be
+    /// used by users of Watchdog to assist with managing their collections of
+    /// Errors on their viewmodel.
     /// </summary>
     public static class ValidationCollectionExtensions
     {
         /// <summary>
-        ///     Creates a <see cref = "ValidationError" /> and adds it to the collection.
+        /// Creates a <see cref="ValidationError"/> and adds it to the collection.
         /// </summary>
-        /// <param name = "collection">The target collection to add to.</param>
-        /// <param name = "targetFieldKeys">The list of fields to flag with the message.</param>
-        /// <param name = "message">The associated message.</param>
+        /// <param name="collection">The target collection to add to.</param>
+        /// <param name="message">The associated message.</param>
+        /// <param name="targetFieldKeys">The list of fields to flag with the message.</param>
         public static void Add(this ICollection<IError> collection, string message, params string[] targetFieldKeys)
         {
             foreach (var fieldKey in targetFieldKeys)
@@ -45,13 +53,13 @@ namespace Watchdog.Validation.Core.ClientUtil
         }
 
         /// <summary>
-        ///     Clears all <see cref = "ValidationError" /> for the named target field. 
-        ///     This will not clear any <see cref = "ConversionError" /> present.  These should
-        ///     only be removed by WPF when it detects that a binding with a failed conversion
-        ///     has now been correct.
+        /// Clears all <see cref="ValidationError"/> for the named target field.
+        /// This will not clear any <see cref="ConversionError"/> present.  These should
+        /// only be removed by WPF when it detects that a binding with a failed conversion
+        /// has now been correct.
         /// </summary>
-        /// <param name = "collection">The source collection.</param>
-        /// <param name = "targetFieldKey">The field for which errors are being cleared.</param>
+        /// <param name="collection">The source collection.</param>
+        /// <param name="targetFieldKey">The field for which errors are being cleared.</param>
         public static void ClearValidationError(this ICollection<IError> collection, string targetFieldKey)
         {
             // ToList() is called to "physicalize" the IEnumerable so we aren't iterating over
@@ -63,11 +71,11 @@ namespace Watchdog.Validation.Core.ClientUtil
         }
 
         /// <summary>
-        ///     Gets the <see cref = "ValidationError" /> in the given <see cref = "ICollection{IError}" />
+        /// Gets the <see cref="ValidationError"/> in the given <see cref="ICollection{IError}"/>
         /// </summary>
-        /// <param name = "collection">The source collection.</param>
+        /// <param name="collection">The source collection.</param>
         /// <returns>
-        ///     An <see cref = "IEnumerable{ValidationError}" /> containing only the <see cref = "ValidationError" /> in the collection.
+        /// An <see cref="IEnumerable{ValidationError}"/> containing only the <see cref="ValidationError"/> in the collection.
         /// </returns>
         public static IEnumerable<ValidationError> GetValidationErrors(this ICollection<IError> collection)
         {
@@ -75,10 +83,10 @@ namespace Watchdog.Validation.Core.ClientUtil
         }
 
         /// <summary>
-        ///     Retrieves the <see cref = "IError" /> matching the given field key.
+        /// Retrieves the <see cref="IError"/> matching the given field key.
         /// </summary>
-        /// <param name = "collection">The source collection.</param>
-        /// <param name = "targetFieldKey">The field for which errors are being search for.</param>
+        /// <param name="collection">The source collection.</param>
+        /// <param name="targetFieldKey">The field for which errors are being search for.</param>
         /// <returns></returns>
         public static IEnumerable<IError> MatchingField(this IEnumerable<IError> collection, string targetFieldKey)
         {

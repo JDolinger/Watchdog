@@ -1,113 +1,130 @@
 ﻿//  
-//  ElementValidationHandler.cs
+// ElementValidationHandler.cs
 //
-//  Copyright (C) 2011 Jason Dolinger
+// Copyright (C) 2011 by Jason Dolinger
 //
-//  This program is free software; you can redistribute it and/or modify it under the terms 
-//	of the GNU General Public License as published by the Free Software Foundation; either
-//	version 2 of the License, or (at your option) any later version.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-//	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-//	See the GNU General Public License for more details. You should have received a copy of 
-//	the GNU General Public License along with this program; if not, write to the Free Software 
-//	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 //
 namespace Watchdog.Validation.Core.Internal
 {
     using System;
+    using System.Diagnostics;
     using System.Globalization;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Data;
 
     /// <summary>
-    ///     A manager for a single <see cref = "FrameworkElement" />.   This is the lowest-level in Watchdog, where
-    ///     the controls are forced into error with an artifical dummy binding between two do-nothing <see cref = "DependencyProperty" />
-    ///     which are attached to the <see cref = "FrameworkElement" /> and marked as invalid.
+    /// A manager for a single <see cref="FrameworkElement"/>.   This is the lowest-level in Watchdog, where
+    /// the controls are forced into error with an artifical dummy binding between two do-nothing <see cref="DependencyProperty"/>
+    /// which are attached to the <see cref="FrameworkElement"/> and marked as invalid.
     /// </summary>
     internal class ElementValidationHandler
     {
         /// <summary>
-        ///     Registers the ValidationSource attached DependencyProperty.  This property does nothing but serve as one end of
-        ///     a binding that we use to mark the <see cref = "FrameworkElement" /> as invalid.
+        /// Registers the ValidationSource attached DependencyProperty.  This property does nothing but serve as one end of
+        /// a binding that we use to mark the <see cref="FrameworkElement"/> as invalid.
         /// </summary>
         public static readonly DependencyProperty ValidationSourceProperty =
             DependencyProperty.RegisterAttached("ValidationSource", typeof (string), typeof (ElementValidationHandler));
 
         /// <summary>
-        ///     Registers the ValidationTarget attached DependencyProperty.  This property does nothing but serve as one end of
-        ///     a binding that we use to mark the <see cref = "FrameworkElement" /> as invalid.
+        /// Registers the ValidationTarget attached DependencyProperty.  This property does nothing but serve as one end of
+        /// a binding that we use to mark the <see cref="FrameworkElement"/> as invalid.
         /// </summary>
         public static readonly DependencyProperty ValidationTargetProperty =
             DependencyProperty.RegisterAttached("ValidationTarget", typeof (string), typeof (ElementValidationHandler));
 
         /// <summary>
-        ///     A reference to the <see cref = "FrameworkElement" /> being marked and unmarked.  We use a <see cref = "WeakReference" /> to 
-        ///     ensure that we don't prevent the element from being GC'ed if no one else has a reference.
+        /// A reference to the <see cref="FrameworkElement"/> being marked and unmarked.  We use a <see cref="WeakReference"/> to
+        /// ensure that we don't prevent the element from being GC'ed if no one else has a reference.
         /// </summary>
         private readonly WeakReference controlRef;
 
         /// <summary>
-        ///     A WPF framework ValidationRule used to force the dummy binding here into error.
+        /// A WPF framework ValidationRule used to force the dummy binding here into error.
         /// </summary>
         private ArtificalValidationRule rule;
 
         /// <summary>
-        ///     A <see cref = "BindingExpressionBase" /> between the attached <see cref = "ValidationSourceProperty" /> and 
-        ///     <see cref = "ValidationTargetProperty" />.  This expression serves as the invalidation point for creating validation
-        ///     errors in the control.
+        /// A <see cref="BindingExpressionBase"/> between the attached <see cref="ValidationSourceProperty"/> and
+        /// <see cref="ValidationTargetProperty"/>.  This expression serves as the invalidation point for creating validation
+        /// errors in the control.
         /// </summary>
         private BindingExpressionBase errorHostingBindingExpr;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref = "ElementValidationHandler" /> class.  Sets of a <see cref = "WeakReference" />
-        ///     to the given element.  The rest of the invalid mechanisms are not initialized until the first time we need to 
-        ///     invalid the <see cref = "element" />.
+        /// Initializes a new instance of the <see cref="ElementValidationHandler"/> class.  Sets of a <see cref="WeakReference"/>
+        /// to the given element.  The rest of the invalid mechanisms are not initialized until the first time we need to
+        /// invalid the <see cref="element"/>.
         /// </summary>
-        /// <param name = "element">The element.</param>
+        /// <param name="element">The element.</param>
         public ElementValidationHandler(FrameworkElement element)
         {
             this.controlRef = new WeakReference(element);
         }
 
         /// <summary>
-        ///     Gets the validation target property value.
+        /// Gets the validation target property value.
         /// </summary>
+        /// <param name="obj">The obj.</param>
+        /// <returns></returns>
         public static string GetValidationTarget(DependencyObject obj)
         {
             return (string) obj.GetValue(ValidationTargetProperty);
         }
 
         /// <summary>
-        ///     Sets the validation target property value.
+        /// Sets the validation target property value.
         /// </summary>
+        /// <param name="obj">The obj.</param>
+        /// <param name="value">The value.</param>
         public static void SetValidationTarget(DependencyObject obj, string value)
         {
             obj.SetValue(ValidationTargetProperty, value);
         }
 
         /// <summary>
-        ///     Gets the validation source property value.
+        /// Gets the validation source property value.
         /// </summary>
+        /// <param name="obj">The obj.</param>
+        /// <returns></returns>
         public static string GetValidationSource(DependencyObject obj)
         {
             return (string) obj.GetValue(ValidationSourceProperty);
         }
 
         /// <summary>
-        ///     Sets the validation source property value.
+        /// Sets the validation source property value.
         /// </summary>
+        /// <param name="obj">The obj.</param>
+        /// <param name="value">The value.</param>
         public static void SetValidationSource(DependencyObject obj, string value)
         {
             obj.SetValue(ValidationSourceProperty, value);
         }
 
         /// <summary>
-        ///     Shows the specified message.  This is accomplished by marking the errorHostingBindingExpr
-        ///     as invalid with a ValidationError containing the given message.
+        /// Shows the specified message.  This is accomplished by marking the errorHostingBindingExpr
+        /// as invalid with a ValidationError containing the given message.
         /// </summary>
-        /// <param name = "message">The message.</param>
+        /// <param name="message">The message.</param>
         public void Show(string message)
         {
             this.EnsureBinding();
@@ -120,27 +137,31 @@ namespace Watchdog.Validation.Core.Internal
             Validation.MarkInvalid(this.errorHostingBindingExpr, newError);
         }
 
+        /// <summary>
+        /// Creates the val error.
+        /// </summary>
+        /// <param name="e">The e.</param>
         public void CreateValError(ConversionError e)
         {
-            Console.WriteLine("Reattaching conversion error");
+            Debug.WriteLine("Reattaching conversion error");
+            
             var t = this.controlRef.Target as FrameworkElement;
 
             if (t != null)
             {
                 var prop = ValidationProperties.GetBoundProperty(t);
-                t.SetValue(prop, e.InvalidData);
-                BindingOperations.GetBindingExpression(t, prop).UpdateSource();
-                //t.Dispatcher.BeginInvoke(new Action(() =>
-                //{
-                //    t.SetValue(prop, e.InvalidData);
-                //    BindingOperations.GetBindingExpression(t, prop).UpdateSource();
+                var be = BindingOperations.GetBindingExpression(t, prop);
 
-                //}));
+                if (prop != null && be != null)
+                {
+                    t.SetValue(prop, e.InvalidData);
+                    be.UpdateSource();
+                }
             }
         }
 
         /// <summary>
-        ///     Clears the errorHostingBindingExpr of any validation errors.
+        /// Clears the errorHostingBindingExpr of any validation errors.
         /// </summary>
         public void Clear()
         {
@@ -149,8 +170,8 @@ namespace Watchdog.Validation.Core.Internal
         }
 
         /// <summary>
-        ///     Checks for existence (and creates if necessary) the rules and bindings
-        ///     need to flag the control as invalid.
+        /// Checks for existence (and creates if necessary) the rules and bindings
+        /// need to flag the control as invalid.
         /// </summary>
         private void EnsureBinding()
         {
@@ -184,17 +205,17 @@ namespace Watchdog.Validation.Core.Internal
         #region Nested type: ArtificalValidationRule
 
         /// <summary>
-        ///     A WPF ValidationRule which does nothing.  Only exists so we have something to use with Validation.MarkInvalid().
+        /// A WPF ValidationRule which does nothing.  Only exists so we have something to use with Validation.MarkInvalid().
         /// </summary>
         private sealed class ArtificalValidationRule : ValidationRule
         {
             /// <summary>
-            ///     When overridden in a derived class, performs validation checks on a value.
+            /// When overridden in a derived class, performs validation checks on a value.
             /// </summary>
-            /// <param name = "value">The value from the binding target to check.</param>
-            /// <param name = "cultureInfo">The culture to use in this rule.</param>
+            /// <param name="value">The value from the binding target to check.</param>
+            /// <param name="cultureInfo">The culture to use in this rule.</param>
             /// <returns>
-            ///     A <see cref = "T:System.Windows.Controls.ValidationResult" /> object.
+            /// A <see cref="T:System.Windows.Controls.ValidationResult"/> object.
             /// </returns>
             public override ValidationResult Validate(object value, CultureInfo cultureInfo)
             {
@@ -203,21 +224,6 @@ namespace Watchdog.Validation.Core.Internal
         }
 
         #endregion
-    }
-
-    public class BindingAccessor
-    {
-        private readonly Binding b;
-
-        public BindingAccessor(Binding b)
-        {
-            this.b = b;
-        }
-
-        public Binding GetSource()
-        {
-            return this.b;
-        }
     }
 
     public class SafeTypeToStringConverter : IValueConverter
@@ -235,62 +241,69 @@ namespace Watchdog.Validation.Core.Internal
 
             if (stringValue != null)
             {
-                if (targetType == typeof (Int32))
+                object o;
+                if (TypeData.GetParser(targetType).Parse(stringValue, out o))
                 {
-                    int i;
-                    if (Int32.TryParse(stringValue, out i))
-                    {
-                        return i;
-                    }
-                }
-
-                if (targetType == typeof (Int64))
-                {
-                    long l;
-                    if (Int64.TryParse(stringValue, out l))
-                    {
-                        return l;
-                    }
-                }
-
-                if (targetType == typeof (bool))
-                {
-                    bool b;
-                    if (Boolean.TryParse(stringValue, out b))
-                    {
-                        return b;
-                    }
-                }
-
-                if (targetType == typeof (decimal))
-                {
-                    decimal d;
-                    if (Decimal.TryParse(stringValue, out d))
-                    {
-                        return d;
-                    }
-                }
-
-                if (targetType == typeof (double))
-                {
-                    double db;
-                    if (Double.TryParse(stringValue, out db))
-                    {
-                        return db;
-                    }
-                }
-
-                if (targetType == typeof (DateTime))
-                {
-                    DateTime dt;
-                    if (DateTime.TryParse(stringValue, out dt))
-                    {
-                        return dt;
-                    }
+                    return o;
                 }
             }
-
+            
             return DependencyProperty.UnsetValue;
+
+                //if (targetType == typeof (Int32))
+                //{
+                //    int i;
+                //    if (Int32.TryParse(stringValue, out i))
+                //    {
+                //        return i;
+                //    }
+                //}
+
+                //if (targetType == typeof (Int64))
+                //{
+                //    long l;
+                //    if (Int64.TryParse(stringValue, out l))
+                //    {
+                //        return l;
+                //    }
+                //}
+
+                //if (targetType == typeof (bool))
+                //{
+                //    bool b;
+                //    if (Boolean.TryParse(stringValue, out b))
+                //    {
+                //        return b;
+                //    }
+                //}
+
+                //if (targetType == typeof (decimal))
+                //{
+                //    decimal d;
+                //    if (Decimal.TryParse(stringValue, out d))
+                //    {
+                //        return d;
+                //    }
+                //}
+
+                //if (targetType == typeof (double))
+                //{
+                //    double db;
+                //    if (Double.TryParse(stringValue, out db))
+                //    {
+                //        return db;
+                //    }
+                //}
+
+                //if (targetType == typeof (DateTime))
+                //{
+                //    DateTime dt;
+                //    if (DateTime.TryParse(stringValue, out dt))
+                //    {
+                //        return dt;
+                //    }
+                //}
+
         }
 
         #endregion

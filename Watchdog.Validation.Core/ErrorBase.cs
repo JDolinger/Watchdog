@@ -1,43 +1,51 @@
 ﻿//  
-//  ErrorBase.cs
+// ErrorBase.cs
 //
-//  Copyright (C) 2011 Jason Dolinger
+// Copyright (C) 2011 by Jason Dolinger
 //
-//  This program is free software; you can redistribute it and/or modify it under the terms 
-//	of the GNU General Public License as published by the Free Software Foundation; either
-//	version 2 of the License, or (at your option) any later version.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-//	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-//	See the GNU General Public License for more details. You should have received a copy of 
-//	the GNU General Public License along with this program; if not, write to the Free Software 
-//	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 //
 namespace Watchdog.Validation.Core
 {
     using System;
 
     /// <summary>
-    ///     Base class for the different categories of Errors that
-    ///     a field can contain.
+    /// Base class for the different categories of Errors that
+    /// a field can contain.
     /// </summary>
     public abstract class ErrorBase : IError
     {
         /// <summary>
-        ///     The fieldKey for the field that the error is attached.
+        /// The fieldKey for the field that the error is attached.
         /// </summary>
         private readonly string fieldKey;
 
         /// <summary>
-        ///     The associated error message.
+        /// The associated error message.
         /// </summary>
         private readonly string message;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref = "ErrorBase" /> class.
+        /// Initializes a new instance of the <see cref="ErrorBase"/> class.
         /// </summary>
-        /// <param name = "fieldKey">The target binding.</param>
-        /// <param name = "message">The message.</param>
+        /// <param name="fieldKey">The target binding.</param>
+        /// <param name="message">The message.</param>
         protected ErrorBase(string fieldKey, string message)
         {
             if (string.IsNullOrEmpty(fieldKey))
@@ -55,11 +63,11 @@ namespace Watchdog.Validation.Core
         }
 
         /// <summary>
-        ///     A key identifier for the field that this
-        ///     error is associated with.  This is typically
-        ///     the ViewModel property that is being flagged
-        ///     as an error.  Remember that there may be multiple
-        ///     physical controls bound to a field.
+        /// A key identifier for the field that this
+        /// error is associated with.  This is typically
+        /// the ViewModel property that is being flagged
+        /// as an error.  Remember that there may be multiple
+        /// physical controls bound to a field.
         /// </summary>
         public string FieldKey
         {
@@ -67,7 +75,7 @@ namespace Watchdog.Validation.Core
         }
 
         /// <summary>
-        ///     The associated error message.
+        /// The associated error message.
         /// </summary>
         public string Message
         {
@@ -75,11 +83,11 @@ namespace Watchdog.Validation.Core
         }
 
         /// <summary>
-        ///     Equals implementation for the fields at this level of the hierarchy.  An additional
-        ///     type parameter is supplied for the caller to provide a type for the comparison object.
+        /// Equals implementation for the fields at this level of the hierarchy.  An additional
+        /// type parameter is supplied for the caller to provide a type for the comparison object.
         /// </summary>
-        /// <typeparam name = "T"></typeparam>
-        /// <param name = "obj">The obj.</param>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj">The obj.</param>
         /// <returns></returns>
         protected bool CompareCore<T>(object obj) where T : ErrorBase
         {
@@ -100,12 +108,11 @@ namespace Watchdog.Validation.Core
         }
 
         /// <summary>
-        /// Serves as a hash function for a particular type. 
+        /// Serves as a hash function for a particular type.
         /// </summary>
         /// <returns>
         /// A hash code for the current <see cref="T:System.Object"/>.
         /// </returns>
-        /// <filterpriority>2</filterpriority>
         public override int GetHashCode()
         {
             return this.fieldKey.GetHashCode() ^ this.message.GetHashCode();

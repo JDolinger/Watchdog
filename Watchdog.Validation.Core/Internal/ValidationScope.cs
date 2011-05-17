@@ -1,17 +1,25 @@
 ﻿//  
-//  ValidationScope.cs
+// ValidationScope.cs
 //
-//  Copyright (C) 2011 Jason Dolinger
+// Copyright (C) 2011 by Jason Dolinger
 //
-//  This program is free software; you can redistribute it and/or modify it under the terms 
-//	of the GNU General Public License as published by the Free Software Foundation; either
-//	version 2 of the License, or (at your option) any later version.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-//	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-//	See the GNU General Public License for more details. You should have received a copy of 
-//	the GNU General Public License along with this program; if not, write to the Free Software 
-//	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 //
 namespace Watchdog.Validation.Core.Internal
 {
@@ -29,48 +37,44 @@ namespace Watchdog.Validation.Core.Internal
     using ValidationError = Watchdog.Validation.Core.ValidationError;
 
     /// <summary>
-    ///     The implementation of validation management for a portion of a
-    ///     WPF LogicalTree.  When <see cref = "FrameworkElement" /> register
-    ///     themseives with the scope, it figures which field they are associated
-    ///     with, typically through the the property name that the element is bound to. 
-    /// 
-    ///     The scope also is given a <see cref = "ICollection{T}" />.  When the 
-    ///     collection is modified, the scope makes the association between the 
-    ///     errors and the logical field that the error should be attached to.
-    /// 
-    ///     Additionally, the scope watches for any WPF Validation errors
-    ///     created by any controls under the scope.  If found, they are inserted
-    ///     into the collection.  This way the ViewModel layer of an application (which
-    ///     supplied the collection), is now aware of these types of error.
+    /// The implementation of validation management for a portion of a
+    /// WPF LogicalTree.  When <see cref="FrameworkElement"/> register
+    /// themseives with the scope, it figures which field they are associated
+    /// with, typically through the the property name that the element is bound to.
+    /// The scope also is given a <see cref="ICollection{T}"/>.  When the
+    /// collection is modified, the scope makes the association between the
+    /// errors and the logical field that the error should be attached to.
+    /// Additionally, the scope watches for any WPF Validation errors
+    /// created by any controls under the scope.  If found, they are inserted
+    /// into the collection.  This way the ViewModel layer of an application (which
+    /// supplied the collection), is now aware of these types of error.
     /// </summary>
     internal class ValidationScope
     {
         /// <summary>
-        ///     The list of all Fields in the scope.
+        /// The list of all Fields in the scope.
         /// </summary>
         private readonly FieldMap fieldList;
 
         /// <summary>
-        ///     Responsible for observing the collection of <see cref = "IError" />
-        ///     and notifying the scope when items are added or removed.
+        /// Responsible for observing the collection of <see cref="IError"/>
+        /// and notifying the scope when items are added or removed.
         /// </summary>
         private readonly CollectionWatcher<IError, ValidationError> errorWatcher;
 
         private readonly RunAfterDispatchCommand reattachErrorCommand;
 
         /// <summary>
-        ///     The collection of <see cref = "IError" /> representing any <see cref = "Wpf.Validation.ValidationError" /> 
-        ///     which have been added to the collection, as well <see cref = "ConversionError" /> that
-        ///     the WPF framework has raised.
+        /// The collection of <see cref="IError"/> representing any <see cref="Wpf.Validation.ValidationError"/>
+        /// which have been added to the collection, as well <see cref="ConversionError"/> that
+        /// the WPF framework has raised.
         /// </summary>
         private ICollection<IError> errorSource;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref = "ValidationScope" /> class.
+        /// Initializes a new instance of the <see cref="ValidationScope"/> class.
         /// </summary>
-        /// <param name = "root">
-        ///     The root element of the scope where the initial <see cref = "ICollection{IError}" /> has been attached.
-        /// </param>
+        /// <param name="root">The root element of the scope where the initial <see cref="ICollection{IError}"/> has been attached.</param>
         public ValidationScope(FrameworkElement root)
         {
             if (root == null)
@@ -175,10 +179,10 @@ namespace Watchdog.Validation.Core.Internal
         }
 
         /// <summary>
-        ///     Called when an <see cref = "IError" /> has been added to the collection.  It handles
-        ///     finding the <see cref = "IField" /> with the given fieldKey and adding the error to the field.
+        /// Called when an <see cref="IError"/> has been added to the collection.  It handles
+        /// finding the <see cref="IField"/> with the given fieldKey and adding the error to the field.
         /// </summary>
-        /// <param name = "added">The added.</param>
+        /// <param name="added">The added.</param>
         private void OnAdded(ValidationError added)
         {
             var f = this.fieldList.Find(added.FieldKey);
@@ -193,10 +197,10 @@ namespace Watchdog.Validation.Core.Internal
         }
 
         /// <summary>
-        ///     Called when an <see cref = "IError" /> has been removed from the collection.  It handles
-        ///     finding the <see cref = "IField" /> with the given fieldKey and removing the error to the field.
+        /// Called when an <see cref="IError"/> has been removed from the collection.  It handles
+        /// finding the <see cref="IField"/> with the given fieldKey and removing the error to the field.
         /// </summary>
-        /// <param name = "removed">The removed.</param>
+        /// <param name="removed">The <see cref="ValidationError"/> being removed.</param>
         private void OnRemoved(ValidationError removed)
         {
             var f = this.fieldList.Find(removed.FieldKey);

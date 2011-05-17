@@ -13,7 +13,7 @@
         private readonly ICommand bookTicketCommand;
         private readonly IParameters tradingParams;
         private string side;
-        private int quantity;
+        private int? quantity;
         private string symbol;
         private decimal price;
         private decimal total;
@@ -44,7 +44,7 @@
             }
         }
 
-        public int Quantity
+        public int? Quantity
         {
             get { return this.quantity; }
             set
@@ -110,7 +110,7 @@
 
         private void CalculateTotal()
         {
-            this.Total = this.Price * this.Quantity;
+            this.Total = this.Price * (this.Quantity.HasValue ? this.Quantity.Value : 0);
 
             if (this.total > this.tradingParams.TradingLimit)
             {
