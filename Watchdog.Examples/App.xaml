@@ -1,7 +1,7 @@
 ﻿<Application x:Class="Watchdog.Examples.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Views\Launcher.xaml">
+             StartupUri="Views\DemoDriver.xaml">
     <Application.Resources>
         
         <Style x:Key="EntryBase">
