@@ -18,6 +18,13 @@
         private decimal price;
         private decimal total;
 
+#region rules
+
+        private const string ShortQty = "Invalid.InsufficientQty";
+        private const string OverLimit = "Invalid.OverLimit";
+        private const string Restricted = "Invalid.RestrictedSymbol";
+#endregion  
+
         public OrderTicketViewModel(IParameters tradingParams)
         {
             this.tradingParams = tradingParams;
@@ -114,36 +121,33 @@
 
             if (this.total > this.tradingParams.TradingLimit)
             {
-                this.validationErrors.Add("Over trading limit", "Price", "Quantity");
+                this.validationErrors.Add(OverLimit, "Over trading limit", "Price", "Quantity");
             }
             else
             {
-                this.validationErrors.ClearValidationError("Price");
-                this.validationErrors.ClearValidationError("Quantity");
+                this.validationErrors.ClearValidationError(OverLimit);
             }
         }
 
         private void ValidatePosition()
         {
-            this.validationErrors.ClearValidationError("Side");
-            this.validationErrors.ClearValidationError("Quantity");
-            this.validationErrors.ClearValidationError("Symbol");
+            this.validationErrors.ClearValidationError(ShortQty);
 
             if (this.Side == "Short")
             {
                 if (this.quantity > this.tradingParams.GetPosition(this.symbol))
                 {
-                    this.validationErrors.Add("Can not short more than current position.", "Side", "Quantity", "Symbol");
+                    this.validationErrors.Add(ShortQty, "Can not short more than current position.", "Side", "Quantity", "Symbol");
                 }
             }
         }
 
         private void ValidateSymbol()
         {
-            this.validationErrors.ClearValidationError("Symbol");
+            this.validationErrors.ClearValidationError(Restricted);
             if (this.tradingParams.RestrictedSymbols.Contains(this.symbol))
             {
-                this.validationErrors.Add(string.Format("{0} is restricted", this.symbol), "Symbol");
+                this.validationErrors.Add(Restricted, string.Format("{0} is restricted", this.symbol), "Symbol");
             }
         }
 

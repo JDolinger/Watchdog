@@ -39,15 +39,15 @@ namespace Watchdog.Validation.Core.ClientUtil
         /// <param name="collection">The target collection to add to.</param>
         /// <param name="message">The associated message.</param>
         /// <param name="targetFieldKeys">The list of fields to flag with the message.</param>
-        public static void Add(this ICollection<IError> collection, string message, params string[] targetFieldKeys)
+        public static void Add(this ICollection<IError> collection, string errorKey, string message, params string[] targetFieldKeys)
         {
             foreach (var fieldKey in targetFieldKeys)
             {
-                var err = new ValidationError(fieldKey, message);
+                var err = new ValidationError(fieldKey, errorKey, message);
 
                 if (!collection.Contains(err))
                 {
-                    collection.Add(new ValidationError(fieldKey, message));
+                    collection.Add(new ValidationError(fieldKey, errorKey, message));
                 }
             }
         }
@@ -64,7 +64,7 @@ namespace Watchdog.Validation.Core.ClientUtil
         {
             // ToList() is called to "physicalize" the IEnumerable so we aren't iterating over
             // the collection while removing items.
-            foreach (var remove in collection.GetValidationErrors().MatchingField(targetFieldKey).ToList())
+            foreach (var remove in collection.GetValidationErrors().MatchingErrorKey(targetFieldKey).ToList())
             {
                 collection.Remove(remove);
             }
@@ -91,6 +91,11 @@ namespace Watchdog.Validation.Core.ClientUtil
         public static IEnumerable<IError> MatchingField(this IEnumerable<IError> collection, string targetFieldKey)
         {
             return collection.Where(e => e.FieldKey == targetFieldKey);
+        }
+
+        public static IEnumerable<IError> MatchingErrorKey(this IEnumerable<IError> collection, string errorKey)
+        {
+            return collection.OfType<ValidationError>().Where(e => e.ErrorKey == errorKey);
         }
     }
 }

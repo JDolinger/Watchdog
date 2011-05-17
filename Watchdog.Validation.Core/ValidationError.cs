@@ -23,6 +23,8 @@
 //
 namespace Watchdog.Validation.Core
 {
+    using System;
+
     /// <summary>
     /// A Validation Error that can be used to flag a field as invalid along with a message.  This is
     /// for building property validation logic at the ViewModel layer, and being able to associate
@@ -30,13 +32,27 @@ namespace Watchdog.Validation.Core
     /// </summary>
     public class ValidationError : ErrorBase
     {
+        private readonly string errorKey;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationError"/> class.
         /// </summary>
         /// <param name="fieldKey">The target binding.</param>
+        /// <param name="errorKey">The error key.</param>
         /// <param name="message">The message.</param>
-        public ValidationError(string fieldKey, string message) : base(fieldKey, message)
+        public ValidationError(string fieldKey, string errorKey, string message) : base(fieldKey, message)
         {
+            if (string.IsNullOrEmpty(errorKey))
+            {
+                throw new ArgumentException("errorKey");
+            }
+
+            this.errorKey = errorKey;
+        }
+
+        public string ErrorKey
+        {
+            get { return this.errorKey; }
         }
 
 #pragma warning disable 659
@@ -50,7 +66,14 @@ namespace Watchdog.Validation.Core
         public override bool Equals(object obj)
 #pragma warning restore 659
         {
-            return this.CompareCore<ValidationError>(obj);
+            if  (!CompareCore<ValidationError>(obj))
+            {
+                return false;
+            }
+
+            var ve = (ValidationError) obj;
+
+            return object.Equals(this.errorKey, ve.ErrorKey);
         }
     }
 }

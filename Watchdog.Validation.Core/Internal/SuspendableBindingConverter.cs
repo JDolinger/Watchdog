@@ -27,17 +27,48 @@ namespace Watchdog.Validation.Core.Internal
     using System.Globalization;
     using System.Windows.Data;
 
+    /// <summary>
+    /// A Decorator on another <see cref="IValueConverter"/> which
+    /// will use the <see cref="WatchdogBinding.SuspendTransfer"/>
+    /// flag to determine whether a transfer between source and target
+    /// should actually occur or whether the a transfer should be
+    /// stopped.
+    /// </summary>
     internal class SuspendableBindingConverter : IValueConverter
     {
+        /// <summary>
+        /// The real <see cref="IValueConverter"/> to use if the WatchdogBinding
+        /// does not have its <see cref="WatchdogBinding.SuspendTransfer"/>
+        /// flag set to true.
+        /// </summary>
         private readonly IValueConverter internalConverter;
+
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly WatchdogBinding hostBinding;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SuspendableBindingConverter"/> class.
+        /// </summary>
+        /// <param name="internalConverter">The internal converter.</param>
+        /// <param name="binding">The binding.</param>
         public SuspendableBindingConverter(IValueConverter internalConverter, WatchdogBinding binding)
         {
             this.internalConverter = internalConverter;
             this.hostBinding = binding;
         }
 
+        /// <summary>
+        /// Converts a value.
+        /// </summary>
+        /// <param name="value">The value produced by the binding source.</param>
+        /// <param name="targetType">The type of the binding target property.</param>
+        /// <param name="parameter">The converter parameter to use.</param>
+        /// <param name="culture">The culture to use in the converter.</param>
+        /// <returns>
+        /// A converted value. If the method returns null, the valid null value is used.
+        /// </returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return this.hostBinding.SuspendTransfer ? 
@@ -45,6 +76,16 @@ namespace Watchdog.Validation.Core.Internal
                 this.internalConverter.Convert(value, targetType, parameter, culture);
         }
 
+        /// <summary>
+        /// Converts a value.
+        /// </summary>
+        /// <param name="value">The value that is produced by the binding target.</param>
+        /// <param name="targetType">The type to convert to.</param>
+        /// <param name="parameter">The converter parameter to use.</param>
+        /// <param name="culture">The culture to use in the converter.</param>
+        /// <returns>
+        /// A converted value. If the method returns null, the valid null value is used.
+        /// </returns>
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return this.hostBinding.SuspendTransfer ? 

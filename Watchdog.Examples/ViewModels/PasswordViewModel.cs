@@ -71,12 +71,11 @@
             {
                 if (this.password1 != this.password2)
                 {
-                    this.validationErrors.Add("Passwords must match", "Password1", "Password2");
+                    this.validationErrors.Add("Pw", "Passwords must match", "Password1", "Password2");
                 }
                 else
                 {
-                    this.validationErrors.ClearValidationError("Password1");
-                    this.validationErrors.ClearValidationError("Password2");
+                    this.validationErrors.ClearValidationError("Pw");
                 }
             }
         }
