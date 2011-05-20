@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchdog.Validation.Core", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchdog.Examples", "Watchdog.Examples\Watchdog.Examples.csproj", "{E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardWpfValidation", "StandardWpfValidation\StandardWpfValidation.csproj", "{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,16 +35,6 @@ Global
 		{E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5}.Release|Mixed Platforms.Build.0 = Release|x86
 		{E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5}.Release|x86.ActiveCfg = Release|x86
 		{E9F8632C-C629-47A7-B7B3-16AA2DBA6DF5}.Release|x86.Build.0 = Release|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Debug|x86.ActiveCfg = Debug|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Debug|x86.Build.0 = Debug|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Release|Any CPU.ActiveCfg = Release|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Release|Mixed Platforms.Build.0 = Release|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Release|x86.ActiveCfg = Release|x86
-		{F363F572-E5CA-49A5-8A5C-9A46783A5BCD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

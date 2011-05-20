@@ -30,10 +30,7 @@
             this.tradingParams = tradingParams;
             this.bookTicketCommand = new DelegateCommand<object>(
                 x => this.CanBook(),
-                x =>
-                {
-                    /* nothing here for demo */
-                });
+                x => { /* nothing here for demo */ });
 
             this.validationErrors = new ObservableCollection<IError>();
         }
